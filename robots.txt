@@ -1,0 +1,4 @@
+User-agent: *
+# PREVIEW ONLY: change to "Allow: /" at final launch
+Disallow: /
+Sitemap: https://d4rm4n.github.io/euromedical-web/sitemap.xml
