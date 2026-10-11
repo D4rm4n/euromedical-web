@@ -1,4 +1,3 @@
 User-agent: *
-# PREVIEW ONLY: change to "Allow: /" at final launch
-Disallow: /
+Allow: /
 Sitemap: https://euromedicalpharma.com.co/sitemap.xml
