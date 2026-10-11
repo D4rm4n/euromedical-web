@@ -286,3 +286,14 @@ textarea{resize:vertical}
 .maq-cta p{margin:0;color:var(--muted);font-size:.93rem}
 .maq-actions{display:flex;flex-wrap:wrap;gap:10px}
 @media (max-width:559px){.maq-actions .btn{flex:1 1 100%}.maq-badge{width:120px;height:120px}.maq-badge strong{font-size:2.1rem}}
+/* multi-page */
+h1.h2{font-size:clamp(1.6rem,4.5vw,2.25rem);font-weight:800;letter-spacing:-.01em}
+.nav a.is-current{color:var(--blue)!important;font-weight:700}
+@media (min-width:1024px){.nav a.is-current{box-shadow:inset 0 -3px 0 var(--gold,#D6B26E)}}
+.cta-center{justify-content:center;margin-top:28px}
+a.why-link{text-decoration:none;color:inherit;display:block;transition:transform .15s,box-shadow .15s}
+a.why-link:hover{transform:translateY(-3px)}
+a.why-link .link-more{display:inline-block;margin-top:8px}
+.page-cta{padding-top:0}
+.map-wrap{margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/7;min-height:280px}
+.map-wrap iframe{width:100%;height:100%;border:0;display:block}

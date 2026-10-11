@@ -13,6 +13,7 @@
   }
   chips.forEach(function(c){c.addEventListener('click',function(){filter(c.dataset.filter);});});
   document.querySelectorAll('[data-filter-link]').forEach(function(a){a.addEventListener('click',function(){filter(a.dataset.filterLink);});});
+  var q=(location.search.match(/[?&]linea=(\w+)/)||[])[1];if(q&&chips.some(function(c){return c.dataset.filter===q;}))filter(q);
   var f=document.getElementById('contact-form');
   if(f){f.addEventListener('submit',function(e){
     e.preventDefault();
