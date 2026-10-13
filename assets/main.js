@@ -21,7 +21,7 @@
     if(!g('nombre')||!g('mensaje')){err.hidden=false;return;}
     err.hidden=true;
     var body='Nombre: '+g('nombre')+'\nTeléfono: '+g('telefono')+'\nCiudad: '+g('ciudad')+'\nSoy: '+g('tipo')+'\n\n'+g('mensaje');
-    window.location.href='mailto:euromedicalpharma@gmail.com?subject='+encodeURIComponent('Mensaje desde la web - '+g('nombre'))+'&body='+encodeURIComponent(body);
+    window.location.href='mailto:ventas@euromedicalpharma.com.co?subject='+encodeURIComponent('Mensaje desde la web - '+g('nombre'))+'&body='+encodeURIComponent(body);
   });}
   var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
 })();
