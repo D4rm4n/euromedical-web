@@ -1,7 +1,7 @@
 /**
  * Euromedical Pharma – Cloudflare Worker para Mercado Pago Checkout Pro.
  * Secret requerido (NUNCA en el código):  wrangler secret put MP_ACCESS_TOKEN
- * Variables (wrangler.toml [vars]): SITE_ORIGIN, PRICES_URL, ENVIOS_URL
+ * Variables (wrangler.toml [vars]): SITE_ORIGIN, PRICES_URL, ENVIOS_URL, MP_SANDBOX ("true" con credenciales de prueba)
  *
  * POST /checkout  {items:[{id,cantidad}], comprador:{nombre,telefono,email,direccion,ciudad}}
  *   -> {init_point, id}   (el navegador redirige a init_point)
@@ -105,7 +105,8 @@ async function checkout(request, env, h) {
   });
   const j = await r.json();
   if (!r.ok) { console.log('MP error', r.status, JSON.stringify(j)); return json({ error: 'Mercado Pago rechazó la solicitud' }, 502, h); }
-  return json({ id: j.id, init_point: j.init_point, referencia: ref, subtotal, envio: env_.costo, total: subtotal + env_.costo }, 200, h);
+  const sandbox = env.MP_SANDBOX === 'true';
+  return json({ id: j.id, init_point: sandbox ? j.sandbox_init_point : j.init_point, sandbox, referencia: ref, subtotal, envio: env_.costo, total: subtotal + env_.costo }, 200, h);
 }
 
 async function webhook(request, env) {
