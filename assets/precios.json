@@ -4,6 +4,28 @@
  "actualizado": "2026-10-18",
  "productos": [
   {
+   "id": "vn-premium-400",
+   "nombre": "Vitanext Premium",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p43",
+   "precio": 47491,
+   "antes": 49990,
+   "descuento": 5,
+   "fuente": "Precio fijado por Alejandro: 49.990 con promo 5% = 47.491 (redondeado hacia arriba); igual en ambas líneas"
+  },
+  {
+   "id": "vzf-premium-400",
+   "nombre": "VitaZinc-F Premium",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p09",
+   "precio": 47491,
+   "antes": 49990,
+   "descuento": 5,
+   "fuente": "Precio fijado por Alejandro: 49.990 con promo 5% = 47.491 (redondeado hacia arriba); igual en ambas líneas"
+  },
+  {
    "id": "vzf-fosforo-400",
    "nombre": "VitaZinc-F Fósforo",
    "presentacion": "400 g",

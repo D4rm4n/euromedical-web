@@ -53,7 +53,7 @@ function loadGeo(){if(E)return Promise.resolve();return Promise.all([fetch(base+
 function total(){return Object.entries(cart).reduce((s,[id,q])=>s+(P[id]?P[id].precio*q:0),0)}
 function render(){if(ready)for(const id in cart)if(!P[id]||cart[id]<1)delete cart[id];
  const n=Object.entries(cart).filter(([i])=>!ready||P[i]).reduce((a,[,b])=>a+b,0),_=0;const __=Object.values(cart).reduce((a,b)=>a+b,0);$('.cart-count').textContent=n;$('.cart-fab').classList.toggle('has',n>0);
- list.innerHTML=Object.entries(cart).filter(([i])=>P[i]).map(([id,q])=>{const p=P[id];return `<li class="cart-item" data-id="${id}"><img src="${base}img/products/${p.img}.webp" alt="" width="64" height="64"><div><p class="ci-n">${p.nombre}</p><p class="ci-d">${p.detalle}</p><p class="ci-p">${cop(p.precio)}</p></div><div class="ci-q"><button type="button" data-d="-1" aria-label="Quitar uno de ${p.nombre}">−</button><input type="number" min="1" max="99" value="${q}" aria-label="Cantidad de ${p.nombre}"><button type="button" data-d="1" aria-label="Agregar uno de ${p.nombre}">+</button></div><button class="ci-del" type="button" aria-label="Eliminar ${p.nombre}">Eliminar</button></li>`}).join('');
+ list.innerHTML=Object.entries(cart).filter(([i])=>P[i]).map(([id,q])=>{const p=P[id];return `<li class="cart-item" data-id="${id}"><img src="${base}img/products/${p.img}.webp" alt="" width="64" height="64"><div><p class="ci-n">${p.nombre}</p><p class="ci-d">${p.detalle}</p><p class="ci-p">${p.antes?`<s class="cart-was">${cop(p.antes)}</s> `:''}${cop(p.precio)}</p></div><div class="ci-q"><button type="button" data-d="-1" aria-label="Quitar uno de ${p.nombre}">−</button><input type="number" min="1" max="99" value="${q}" aria-label="Cantidad de ${p.nombre}"><button type="button" data-d="1" aria-label="Agregar uno de ${p.nombre}">+</button></div><button class="ci-del" type="button" aria-label="Eliminar ${p.nombre}">Eliminar</button></li>`}).join('');
  document.querySelectorAll('.cart-total').forEach(e=>e.textContent=cop(total()));
  $('.cart-empty').hidden=n>0;$('.cart-foot').hidden=n===0;if(!form.hidden)renderShip();}
 list.addEventListener('click',e=>{const li=e.target.closest('.cart-item');if(!li)return;const id=li.dataset.id;if(e.target.dataset.d){cart[id]=Math.min(99,cart[id]+ +e.target.dataset.d);if(cart[id]<1)delete cart[id];save()}if(e.target.classList.contains('ci-del')){delete cart[id];save()}});
@@ -71,6 +71,7 @@ form.addEventListener('submit',async e=>{e.preventDefault();const err=$('.cart-e
 function msg(d){return `Hola Euromedical, quiero hacer este pedido:\n\n${Object.entries(cart).map(([id,q])=>`• ${q} x ${P[id].nombre} (${P[id].detalle}) — ${cop(P[id].precio*q)}`).join('\n')}\n\nSubtotal: ${cop(total())}\nEnvío a ${d.ciudad}${d.rural?' (zona rural)':''}: ${d.envio.gratis?'¡GRATIS!':cop(d.envio.costo)}\nTotal: ${cop(total()+d.envio.costo)}\n\nNombre: ${d.nombre}\nTeléfono: ${d.telefono}\nCorreo: ${d.email}\nDirección: ${d.direccion}\nMunicipio: ${d.ciudad}, ${d.departamento}${d.rural?' (zona rural / vereda)':''}`}
 function sendWA(d){window.open(`https://wa.me/${CFG.wa}?text=${encodeURIComponent(msg(d))}`,'_blank','noopener')}
 function waBtn(d){if(form.querySelector('.cart-wa-alt'))return;const a=document.createElement('button');a.type='button';a.className='btn btn-wa btn-block cart-wa-alt';a.textContent='Enviar pedido por WhatsApp';a.onclick=()=>sendWA(d);form.append(a)}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(!b)return;e.preventDefault();const go=()=>{if(P[b.dataset.add]){add(b.dataset.add,b);open()}};ready?go():setTimeout(go,800)});
 // botones en tarjetas
 fetch(base+'precios.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{j.productos.forEach(p=>P[p.id]=p);ready=true;
  const by={};j.productos.forEach(p=>by[norm(p.nombre)]=p);
@@ -78,7 +79,7 @@ fetch(base+'precios.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{j.produ
   const size=(c.querySelector('.specs')||c.querySelector('.promo-detail')||{}).textContent||'';
   const ps=j.productos.filter(x=>norm(x.nombre)===norm(h.textContent)&&(x.pack||size.includes(x.presentacion)));const p=ps.find(x=>x.sabor&&size.includes(x.sabor))||ps.find(x=>!x.sabor);if(!p)return;
   const act=c.querySelector('.pcard-actions, .promo-actions');if(!act||act.querySelector('.btn-cart'))return;
-  const b=document.createElement('button');b.type='button';b.className='btn btn-cart btn-sm btn-block';b.innerHTML=`<svg aria-hidden="true" width="18" height="18"><use href="#i-cart"/></svg><span>Agregar al carrito · ${cop(p.precio)}</span>`;b.onclick=()=>add(p.id,b);act.prepend(b)});
+  const b=document.createElement('button');b.type='button';b.className='btn btn-cart btn-sm btn-block';b.innerHTML=`<svg aria-hidden="true" width="18" height="18"><use href="#i-cart"/></svg><span>Agregar al carrito · ${p.antes?`<s class="cart-was">${cop(p.antes)}</s> `:''}${cop(p.precio)}${p.descuento?` <em class="cart-off">-${p.descuento}%</em>`:''}</span>`;b.onclick=()=>add(p.id,b);act.prepend(b)});
  render()}).catch(render);
 render();
 })();
