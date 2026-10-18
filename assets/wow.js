@@ -17,7 +17,7 @@ if(!RM)cine.forEach(e=>{e.classList.add('wow-cine');io2.observe(e)});
 const io3=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('lit'),RM?0:700)}),{threshold:.55});
 document.querySelectorAll('.story.wow-gray').forEach(e=>io3.observe(e));
 // 3D products on scroll
-const tilts=[...document.querySelectorAll('.story-tin, .pcard img, .hero-visual img, .promo-media img')];tilts.forEach(e=>e.classList.add('wow-tilt'));
+const tilts=[...document.querySelectorAll('.story-tin, .hero-visual img')];tilts.forEach(e=>e.classList.add('wow-tilt'));
 const bg=document.querySelector('.wow-bg');let tk=false;
 function sc(){tk=false;const y=scrollY,vh=innerHeight;bar.style.transform=`scaleX(${y/(document.documentElement.scrollHeight-vh)})`;if(RM)return;
  if(bg&&y<vh*1.2)bg.style.transform=`scale(${1.08+y/vh*.25}) translateY(${y*.25}px)`;
