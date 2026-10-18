@@ -1,5 +1,5 @@
 {
- "_nota": "Regla: precio web = lo que paga hoy el comprador en MercadoLibre (precio de promoción si la hay). Productos sin publicación exacta usan el precio de su equivalente del mismo tamaño en otra línea (las 4 líneas comparten precios). El Worker usa este archivo como fuente de verdad.",
+ "_nota": "Regla: precio web = lo que paga hoy el comprador en MercadoLibre (precio de promoción si la hay). Productos sin publicación exacta usan el precio de su equivalente del mismo tamaño en otra línea (las 4 líneas comparten precios). El Worker usa este archivo como fuente de verdad. Precios agrupados por tamaño (400 g, 700 g, 1000 g): iguales entre líneas dentro del mismo tamaño.",
  "moneda": "COP",
  "actualizado": "2026-10-18",
  "productos": [
@@ -148,9 +148,31 @@
    "presentacion": "400 g",
    "detalle": "400 g",
    "img": "p13",
+   "precio": 48999,
+   "fuente": "Publicación propia VitSure Advance HMB MCO1433753679 (tamaño inferido 400 g: la más barata de VitSure HMB) — difiere de VitaZinc-F Advance 400 g (61.470)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1433753679"
+  },
+  {
+   "id": "vs-advance-1000-v",
+   "nombre": "VitSure Advance con HMB",
+   "presentacion": "1000 g",
+   "detalle": "1000 g · Vainilla gourmet",
+   "img": "p33",
+   "sabor": "Vainilla gourmet",
    "precio": 79200,
-   "fuente": "Publicación propia en MercadoLibre (VitSure HMB, promo; normal 105.600) — ver conflictos",
-   "ml": "https://articulo.mercadolibre.com.co/MCO-3888932902"
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3888932902",
+   "fuente": "Publicación propia MCO3888932902 (promo; normal 105.600; tamaño inferido 1000 g por nivel de precio)"
+  },
+  {
+   "id": "vs-advance-1000-f",
+   "nombre": "VitSure Advance con HMB",
+   "presentacion": "1000 g",
+   "detalle": "1000 g · Fresa",
+   "img": "p34",
+   "sabor": "Fresa",
+   "precio": 79200,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3888932902",
+   "fuente": "Publicación propia MCO3888932902 (promo; normal 105.600; tamaño inferido 1000 g por nivel de precio)"
   },
   {
    "id": "vs-adultos-400",
@@ -177,7 +199,7 @@
    "detalle": "1000 g · Vainilla",
    "img": "p35",
    "precio": 92990,
-   "fuente": "Publicación propia en MercadoLibre (asumida de 1000 g) — ver conflictos",
+   "fuente": "Publicación propia MCO546819219 (tamaño inferido 1000 g por nivel de precio)",
    "sabor": "Vainilla",
    "ml": "https://articulo.mercadolibre.com.co/MCO-546819219"
   },
@@ -188,7 +210,7 @@
    "detalle": "1000 g · Fresa",
    "img": "p36",
    "precio": 92990,
-   "fuente": "Publicación propia en MercadoLibre (asumida de 1000 g) — ver conflictos",
+   "fuente": "Publicación propia MCO546819219 (tamaño inferido 1000 g por nivel de precio)",
    "sabor": "Fresa",
    "ml": "https://articulo.mercadolibre.com.co/MCO-546819219"
   },
@@ -218,9 +240,9 @@
    "presentacion": "700 g",
    "detalle": "700 g",
    "img": "p18",
-   "precio": 100000,
-   "fuente": "Publicación propia en MercadoLibre — ver conflictos",
-   "ml": "https://articulo.mercadolibre.com.co/MCO-1036975130"
+   "precio": 110000,
+   "fuente": "Publicación \"Factores 700 g\" MCO961946371; la de VitSure Factores MCO1036975130 (100.000) se asume de 1000 g, que no está en la web — revisar: 700 g sale más caro que 1000 g",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-961946371"
   },
   {
    "id": "vs-col-marino-400",
