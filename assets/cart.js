@@ -74,9 +74,9 @@ function waBtn(d){if(form.querySelector('.cart-wa-alt'))return;const a=document.
 // botones en tarjetas
 fetch(base+'precios.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{j.productos.forEach(p=>P[p.id]=p);ready=true;
  const by={};j.productos.forEach(p=>by[norm(p.nombre)]=p);
- document.querySelectorAll('.pcard, .promo-card, .pack-card').forEach(c=>{const h=c.querySelector('h3');if(!h)return;const p=by[norm(h.textContent)];
+ document.querySelectorAll('.pcard, .promo-card, .pack-card').forEach(c=>{const h=c.querySelector('h3');if(!h)return;
   const size=(c.querySelector('.specs')||c.querySelector('.promo-detail')||{}).textContent||'';
-  if(!p||(!p.pack&&!size.includes(p.presentacion)))return;
+  const ps=j.productos.filter(x=>norm(x.nombre)===norm(h.textContent)&&(x.pack||size.includes(x.presentacion)));const p=ps.find(x=>x.sabor&&size.includes(x.sabor))||ps.find(x=>!x.sabor);if(!p)return;
   const act=c.querySelector('.pcard-actions, .promo-actions');if(!act||act.querySelector('.btn-cart'))return;
   const b=document.createElement('button');b.type='button';b.className='btn btn-cart btn-sm btn-block';b.innerHTML=`<svg aria-hidden="true" width="18" height="18"><use href="#i-cart"/></svg><span>Agregar al carrito · ${cop(p.precio)}</span>`;b.onclick=()=>add(p.id,b);act.prepend(b)});
  render()}).catch(render);
