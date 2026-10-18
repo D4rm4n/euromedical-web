@@ -1,7 +1,7 @@
 # Pagos con Mercado Pago (Checkout Pro) – Euromedical Pharma
 
 El sitio (GitHub Pages) es estático. Este Worker de Cloudflare es el único "backend":
-recibe el carrito, recalcula los precios desde `assets/precios.json`, crea la preferencia
+recibe el carrito, recalcula los precios desde `assets/precios.json` y el envío desde `assets/envios.json` (misma tabla que el carrito), crea la preferencia
 de Checkout Pro con el token secreto y devuelve el enlace de pago (tarjetas, PSE, Nequi, Efecty).
 
 ## Despliegue

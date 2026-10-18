@@ -1,9 +1,137 @@
 {
-  "_nota": "Precios de venta directa en pesos colombianos (sin puntos). Solo se pueden agregar al carrito los productos de esta lista; el resto muestra 'Consultar por WhatsApp'. El Worker de Mercado Pago usa ESTE archivo como fuente de verdad (no confía en el precio que manda el navegador). Precios tomados de promos.json (MercadoLibre, verificados el 8 de octubre de 2026): CONFIRMAR con Alejandro antes de publicar.",
-  "moneda": "COP",
-  "productos": [
-    {"id": "vzf-silver-400", "nombre": "VitaZinc-F Silver", "presentacion": "400 g", "detalle": "400 g · Vainilla · Omega 3-6-9", "img": "p08", "precio": 52076},
-    {"id": "vzf-factores-400", "nombre": "VitaZinc-F Factores de Transferencia", "presentacion": "400 g", "detalle": "400 g · Vainilla", "img": "p25", "precio": 68186},
-    {"id": "vzf-fosforo-x2", "nombre": "VitaZinc-F Fósforo x2", "presentacion": "Pack x2", "detalle": "Pack de 2 tarros · Vainilla", "img": "p02", "precio": 100500}
-  ]
+ "_nota": "Regla: el precio web = precio actual en MercadoLibre. Solo se venden en el carrito los productos de esta lista; el resto muestra 'Consultar por WhatsApp'. El Worker usa este archivo como fuente de verdad.",
+ "moneda": "COP",
+ "actualizado": "2026-10-18",
+ "productos": [
+  {
+   "id": "vzf-silver-400",
+   "nombre": "VitaZinc-F Silver",
+   "presentacion": "400 g",
+   "detalle": "400 g · Vainilla · Omega 3-6-9",
+   "img": "p08",
+   "precio": 52076,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3173765622",
+   "fuente": "promos.json (oferta MercadoLibre vigente hasta el 6 nov; verificada el 8 oct)"
+  },
+  {
+   "id": "vzf-factores-400",
+   "nombre": "VitaZinc-F Factores de Transferencia",
+   "presentacion": "400 g",
+   "detalle": "400 g · Vainilla",
+   "img": "p25",
+   "precio": 68186,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3335467696",
+   "fuente": "promos.json (oferta MercadoLibre vigente hasta el 5 nov; verificada el 8 oct)"
+  },
+  {
+   "id": "vzf-silver-x2",
+   "nombre": "VitaZinc-F Silver x2",
+   "presentacion": "Pack x2",
+   "detalle": "Pack de 2 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 2,
+   "precio": 94999,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1943906069",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-silver-x3",
+   "nombre": "VitaZinc-F Silver x3",
+   "presentacion": "Pack x3",
+   "detalle": "Pack de 3 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 3,
+   "precio": 129900,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552364094",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-silver-x4",
+   "nombre": "VitaZinc-F Silver x4",
+   "presentacion": "Pack x4",
+   "detalle": "Pack de 4 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 4,
+   "precio": 160000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552564548",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-silver-x5",
+   "nombre": "VitaZinc-F Silver x5",
+   "presentacion": "Pack x5",
+   "detalle": "Pack de 5 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 5,
+   "precio": 187500,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552565812",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-silver-x6",
+   "nombre": "VitaZinc-F Silver x6",
+   "presentacion": "Pack x6",
+   "detalle": "Pack de 6 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 6,
+   "precio": 210000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552566202",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-fosforo-x2",
+   "nombre": "VitaZinc-F Fósforo x2",
+   "presentacion": "Pack x2",
+   "detalle": "Pack de 2 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 2,
+   "precio": 94999,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-2298549127",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-fosforo-x3",
+   "nombre": "VitaZinc-F Fósforo x3",
+   "presentacion": "Pack x3",
+   "detalle": "Pack de 3 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 3,
+   "precio": 129000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552554286",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-fosforo-x4",
+   "nombre": "VitaZinc-F Fósforo x4",
+   "presentacion": "Pack x4",
+   "detalle": "Pack de 4 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 4,
+   "precio": 160000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-2298550017",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-fosforo-x5",
+   "nombre": "VitaZinc-F Fósforo x5",
+   "presentacion": "Pack x5",
+   "detalle": "Pack de 5 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 5,
+   "precio": 187500,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552529752",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-fosforo-x6",
+   "nombre": "VitaZinc-F Fósforo x6",
+   "presentacion": "Pack x6",
+   "detalle": "Pack de 6 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 6,
+   "precio": 210000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552529896",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  }
+ ]
 }

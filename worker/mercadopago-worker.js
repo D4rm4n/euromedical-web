@@ -1,7 +1,7 @@
 /**
  * Euromedical Pharma – Cloudflare Worker para Mercado Pago Checkout Pro.
  * Secret requerido (NUNCA en el código):  wrangler secret put MP_ACCESS_TOKEN
- * Variables (wrangler.toml [vars]): SITE_ORIGIN, PRICES_URL
+ * Variables (wrangler.toml [vars]): SITE_ORIGIN, PRICES_URL, ENVIOS_URL
  *
  * POST /checkout  {items:[{id,cantidad}], comprador:{nombre,telefono,email,direccion,ciudad}}
  *   -> {init_point, id}   (el navegador redirige a init_point)
@@ -9,6 +9,26 @@
  * Los precios se leen de PRICES_URL (assets/precios.json del sitio); el precio que envía el navegador se ignora.
  */
 const MP_API = 'https://api.mercadopago.com';
+
+// ---- Envío: misma lógica que assets/envio-zonas.js, misma tabla (assets/envios.json) ----
+const nz = s => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+export function zona(E, dep, mun, rural) {
+  if (rural) return 'remoto';
+  const d = nz(dep), m = nz(mun);
+  if (!d || !m) return null;
+  if (E.bogota.some(c => nz(c) === m) && (d.startsWith('bogota') || d === 'cundinamarca')) return 'bogota';
+  if (E.remoto_departamentos.some(x => nz(x) === d)) return 'remoto';
+  const has = t => Object.entries(t).some(([k, v]) => nz(k) === d && v.some(c => nz(c) === m));
+  if (has(E.cercano)) return 'cercano';
+  if (has(E.principal)) return 'principal';
+  return 'remoto';
+}
+export function envio(E, subtotal, dep, mun, rural) {
+  const z = zona(E, dep, mun, rural); if (!z) return null;
+  let costo = E.tarifas[z]; const sobre = subtotal > E.gratis_desde;
+  if (sobre) costo = z === 'remoto' ? Math.round(costo * (1 - E.descuento_remoto_sobre_umbral)) : 0;
+  return { zona: z, costo, gratis: costo === 0, descuento: sobre && z === 'remoto' };
+}
 
 function cors(env, origin) {
   const allowed = [env.SITE_ORIGIN, 'https://www.euromedicalpharma.com.co'];
@@ -31,12 +51,14 @@ async function checkout(request, env, h) {
   const comprador = {
     nombre: clean(c.nombre), telefono: clean(c.telefono, 20).replace(/[^0-9+]/g, ''),
     email: clean(c.email), direccion: clean(c.direccion, 200), ciudad: clean(c.ciudad, 80),
+    departamento: clean(c.departamento, 80), rural: c.rural === true,
   };
-  if (!comprador.nombre || !comprador.telefono || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(comprador.email) || !comprador.direccion || !comprador.ciudad)
+  if (!comprador.nombre || !comprador.telefono || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(comprador.email) || !comprador.direccion || !comprador.ciudad || !comprador.departamento)
     return json({ error: 'Datos del comprador incompletos' }, 400, h);
 
-  const pr = await fetch(env.PRICES_URL, { cf: { cacheTtl: 60 } });
-  if (!pr.ok) return json({ error: 'No se pudo leer la lista de precios' }, 502, h);
+  const [pr, er] = await Promise.all([fetch(env.PRICES_URL, { cf: { cacheTtl: 60 } }), fetch(env.ENVIOS_URL, { cf: { cacheTtl: 60 } })]);
+  if (!pr.ok || !er.ok) return json({ error: 'No se pudo leer la lista de precios o envíos' }, 502, h);
+  const tablaEnvios = await er.json();
   const catalogo = Object.fromEntries((await pr.json()).productos.map(p => [p.id, p]));
 
   const items = [];
@@ -50,6 +72,10 @@ async function checkout(request, env, h) {
     });
   }
   if (!items.length) return json({ error: 'Carrito vacío' }, 400, h);
+  const subtotal = items.reduce((a, i) => a + i.unit_price * i.quantity, 0);
+  const env_ = envio(tablaEnvios, subtotal, comprador.departamento, comprador.ciudad, comprador.rural);
+  if (!env_) return json({ error: 'Municipio inválido' }, 400, h);
+  if (env_.costo > 0) items.push({ id: 'envio', title: `Envío a ${comprador.ciudad}${comprador.rural ? ' (zona rural)' : ''}`, quantity: 1, unit_price: env_.costo, currency_id: 'COP' });
 
   const ref = 'EM-' + Date.now().toString(36).toUpperCase() + '-' + crypto.randomUUID().slice(0, 4).toUpperCase();
   const [first, ...rest] = comprador.nombre.split(' ');
@@ -60,7 +86,7 @@ async function checkout(request, env, h) {
       phone: { number: comprador.telefono },
       address: { street_name: comprador.direccion },
     },
-    shipments: { receiver_address: { street_name: comprador.direccion, city_name: comprador.ciudad } },
+    shipments: { receiver_address: { street_name: comprador.direccion, city_name: comprador.ciudad, state_name: comprador.departamento } },
     back_urls: {
       success: `${env.SITE_ORIGIN}/gracias.html?estado=aprobado`,
       pending: `${env.SITE_ORIGIN}/gracias.html?estado=pendiente`,
@@ -70,7 +96,7 @@ async function checkout(request, env, h) {
     external_reference: ref,
     statement_descriptor: 'EUROMEDICAL',
     notification_url: new URL('/webhook', request.url).toString(),
-    metadata: { ciudad: comprador.ciudad, telefono: comprador.telefono, direccion: comprador.direccion },
+    metadata: { ciudad: comprador.ciudad, departamento: comprador.departamento, rural: comprador.rural, telefono: comprador.telefono, direccion: comprador.direccion, subtotal, envio: env_.costo, zona_envio: env_.zona },
   };
   const r = await fetch(`${MP_API}/checkout/preferences`, {
     method: 'POST',
@@ -79,7 +105,7 @@ async function checkout(request, env, h) {
   });
   const j = await r.json();
   if (!r.ok) { console.log('MP error', r.status, JSON.stringify(j)); return json({ error: 'Mercado Pago rechazó la solicitud' }, 502, h); }
-  return json({ id: j.id, init_point: j.init_point, referencia: ref }, 200, h);
+  return json({ id: j.id, init_point: j.init_point, referencia: ref, subtotal, envio: env_.costo, total: subtotal + env_.costo }, 200, h);
 }
 
 async function webhook(request, env) {

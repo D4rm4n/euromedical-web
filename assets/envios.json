@@ -1,0 +1,211 @@
+{
+ "_nota": "Tabla de envíos (COP). La usan el carrito y el Worker de Mercado Pago (recalcula en el servidor). Municipio no listado = remoto/desconocido (25.000).",
+ "tarifas": {
+  "bogota": 10000,
+  "cercano": 13000,
+  "principal": 18000,
+  "remoto": 25000
+ },
+ "gratis_desde": 100000,
+ "descuento_remoto_sobre_umbral": 0.5,
+ "bogota": [
+  "Bogotá"
+ ],
+ "cercano": {
+  "Cundinamarca": [
+   "Soacha",
+   "Chía",
+   "Cajicá",
+   "Zipaquirá",
+   "Mosquera",
+   "Funza",
+   "Madrid",
+   "Facatativá",
+   "Fusagasugá",
+   "Girardot",
+   "La Calera",
+   "Sopó",
+   "Tocancipá",
+   "Gachancipá",
+   "Tabio",
+   "Tenjo",
+   "Cota",
+   "Sibaté",
+   "Villeta",
+   "Subachoque",
+   "El Rosal",
+   "Bojacá",
+   "Zipacón",
+   "Anolaima",
+   "La Mesa",
+   "Anapoima",
+   "Tena",
+   "San Antonio del Tequendama",
+   "Silvania",
+   "Chipaque",
+   "Choachí",
+   "Ubaque",
+   "Guasca",
+   "Guatavita",
+   "Sesquilé",
+   "Suesca",
+   "Nemocón",
+   "Cogua",
+   "Chocontá",
+   "Ubaté",
+   "Tausa",
+   "Cucunubá",
+   "Sutatausa",
+   "Villapinzón",
+   "La Vega",
+   "Sasaima",
+   "Albán",
+   "Arbeláez",
+   "Pasca",
+   "Tibacuy",
+   "Ricaurte",
+   "Agua de Dios",
+   "Tocaima",
+   "Viotá",
+   "Apulo",
+   "El Colegio",
+   "Cachipay",
+   "Nilo",
+   "Fómeque",
+   "Cáqueza",
+   "Une",
+   "Fosca",
+   "Quetame",
+   "Gachetá",
+   "Junín",
+   "Nocaima",
+   "Nimaima",
+   "Vergara",
+   "Supatá",
+   "San Francisco",
+   "Pacho",
+   "Quipile",
+   "Bituima",
+   "Guayabal de Síquima",
+   "Vianí",
+   "Lenguazaque",
+   "Guachetá",
+   "Fúquene",
+   "Susa",
+   "Simijaca",
+   "Carmen de Carupa",
+   "Machetá",
+   "Tibirita",
+   "Manta",
+   "Granada"
+  ]
+ },
+ "principal": {
+  "Antioquia": [
+   "Medellín",
+   "Envigado",
+   "Itagüí",
+   "Bello",
+   "Sabaneta",
+   "La Estrella",
+   "Copacabana",
+   "Rionegro"
+  ],
+  "Valle del Cauca": [
+   "Cali",
+   "Palmira",
+   "Jamundí",
+   "Yumbo",
+   "Candelaria",
+   "Tuluá",
+   "Buga",
+   "Cartago"
+  ],
+  "Norte de Santander": [
+   "Cúcuta",
+   "Villa del Rosario",
+   "Los Patios"
+  ],
+  "Santander": [
+   "Bucaramanga",
+   "Floridablanca",
+   "Girón",
+   "Piedecuesta",
+   "Barrancabermeja",
+   "San Gil"
+  ],
+  "Risaralda": [
+   "Pereira",
+   "Dosquebradas",
+   "La Virginia",
+   "Santa Rosa de Cabal"
+  ],
+  "Caldas": [
+   "Manizales",
+   "Villamaría",
+   "Chinchiná"
+  ],
+  "Quindío": [
+   "Armenia",
+   "Calarcá",
+   "Montenegro",
+   "La Tebaida"
+  ],
+  "Tolima": [
+   "Ibagué",
+   "El Espinal",
+   "Melgar"
+  ],
+  "Nariño": [
+   "Pasto",
+   "Ipiales"
+  ],
+  "Huila": [
+   "Neiva",
+   "Pitalito",
+   "Garzón"
+  ],
+  "Meta": [
+   "Villavicencio",
+   "Acacías",
+   "Granada",
+   "Puerto López"
+  ],
+  "Boyacá": [
+   "Tunja",
+   "Duitama",
+   "Sogamoso",
+   "Chiquinquirá",
+   "Paipa",
+   "Moniquirá",
+   "Villa de Leyva"
+  ],
+  "Cauca": [
+   "Popayán",
+   "Santander de Quilichao"
+  ],
+  "Casanare": [
+   "Yopal"
+  ],
+  "Caquetá": [
+   "Florencia"
+  ]
+ },
+ "remoto_departamentos": [
+  "San Andrés y Providencia",
+  "Atlántico",
+  "Bolívar",
+  "Magdalena",
+  "Cesar",
+  "Córdoba",
+  "Sucre",
+  "La Guajira",
+  "Amazonas",
+  "Vaupés",
+  "Guainía",
+  "Vichada",
+  "Putumayo",
+  "Chocó",
+  "Guaviare"
+ ]
+}
