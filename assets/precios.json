@@ -1,0 +1,9 @@
+{
+  "_nota": "Precios de venta directa en pesos colombianos (sin puntos). Solo se pueden agregar al carrito los productos de esta lista; el resto muestra 'Consultar por WhatsApp'. El Worker de Mercado Pago usa ESTE archivo como fuente de verdad (no confía en el precio que manda el navegador). Precios tomados de promos.json (MercadoLibre, verificados el 8 de octubre de 2026): CONFIRMAR con Alejandro antes de publicar.",
+  "moneda": "COP",
+  "productos": [
+    {"id": "vzf-silver-400", "nombre": "VitaZinc-F Silver", "presentacion": "400 g", "detalle": "400 g · Vainilla · Omega 3-6-9", "img": "p08", "precio": 52076},
+    {"id": "vzf-factores-400", "nombre": "VitaZinc-F Factores de Transferencia", "presentacion": "400 g", "detalle": "400 g · Vainilla", "img": "p25", "precio": 68186},
+    {"id": "vzf-fosforo-x2", "nombre": "VitaZinc-F Fósforo x2", "presentacion": "Pack x2", "detalle": "Pack de 2 tarros · Vainilla", "img": "p02", "precio": 100500}
+  ]
+}

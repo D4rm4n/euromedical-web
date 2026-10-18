@@ -32,3 +32,5 @@ for _f in _g.glob(_R+'**/*.html',recursive=True):
     i=s.rfind('</body>'); s=s[:i]+f'<script src="{pre}assets/wow.js" defer></script>\n<script src="{pre}assets/p3d.js" defer></script>\n'+s[i:]
     open(_f,'w').write(s)
 print('wow ok')
+import os as _os
+if _os.path.exists('/workspace/euromedical-web/build/cart.py'): exec(open('/workspace/euromedical-web/build/cart.py').read())

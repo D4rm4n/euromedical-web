@@ -1,0 +1,11 @@
+name = "euromedical-pagos"
+main = "mercadopago-worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+SITE_ORIGIN = "https://euromedicalpharma.com.co"
+PRICES_URL = "https://euromedicalpharma.com.co/assets/precios.json"
+
+# Dominio propio (opcional, recomendado): pagos.euromedicalpharma.com.co
+# routes = [ { pattern = "pagos.euromedicalpharma.com.co", custom_domain = true } ]
+# El token NO va aquí:  npx wrangler secret put MP_ACCESS_TOKEN
