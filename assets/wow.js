@@ -1,7 +1,7 @@
 (()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine)').matches;
 const bar=document.createElement('div');bar.className='wow-bar';document.body.appendChild(bar);
 // word reveal
-const h=document.querySelector('.wow-words');if(h){const ws=h.textContent.trim().split(/\s+/);h.setAttribute('aria-label',h.textContent.trim());h.innerHTML=ws.map(w=>`<span class="w" aria-hidden="true">${w}</span>`).join('');
+const h=document.querySelector('.wow-words');if(h){const ws=h.textContent.trim().split(/\s+/);h.setAttribute('aria-label',h.textContent.trim());h.innerHTML=ws.map(w=>`<span class="w${/^(Boost|mente)/.test(w)?" g":""}" aria-hidden="true">${w}</span>`).join('');
  const sp=[...h.children];sp.forEach((s,i)=>setTimeout(()=>s.classList.add('in'),RM?0:200+i*140));const hero=h.closest('.wow-hero');setTimeout(()=>hero.classList.add('ready'),RM?0:200);}
 // particles
 const cv=document.querySelector('.wow-particles');if(cv&&!RM){const c=cv.getContext('2d');let W,H,P=[];const fit=()=>{const d=Math.min(devicePixelRatio,2);W=cv.width=cv.offsetWidth*d;H=cv.height=cv.offsetHeight*d;const n=innerWidth<700?35:80;P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:(Math.random()*2+.6)*d,v:(Math.random()*.4+.15)*d,h:Math.random()<.7?'46,230,255':'255,197,49',a:Math.random()*.6+.2}))};fit();addEventListener('resize',fit);

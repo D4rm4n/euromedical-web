@@ -30,7 +30,7 @@ body.wow input,body.wow select,body.wow textarea{background:#0A1428;color:var(--
 .wow-words{font:900 clamp(2.6rem,8vw,6.2rem)/1 var(--ff-h);letter-spacing:-.03em;max-width:13ch;margin:0 0 24px;color:#fff!important}
 .wow-words .w{display:inline-block;opacity:0;transform:translateY(.6em) rotateX(60deg);filter:blur(8px);transition:opacity .8s var(--ease2,ease),transform .8s var(--ease2,ease),filter .8s;margin-right:.22em}
 .wow-words .w.in{opacity:1;transform:none;filter:none}
-.wow-words .w:nth-last-child(-n+3){background:linear-gradient(90deg,var(--neon),var(--neon2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.wow-words .w.g{background:linear-gradient(90deg,var(--neon),var(--neon2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .wow-lead{font-size:clamp(1rem,2.2vw,1.3rem);max-width:46ch;color:#C9D6EA;opacity:0;transition:opacity 1s .9s}
 .wow-hero.ready .wow-lead,.wow-hero.ready .wow-cta{opacity:1;transform:none}
 .wow-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;opacity:0;transform:translateY(20px);transition:opacity 1s 1.2s,transform 1s 1.2s}
