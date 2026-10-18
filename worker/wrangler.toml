@@ -2,12 +2,16 @@ name = "euromedical-pagos"
 main = "mercadopago-worker.js"
 compatibility_date = "2026-10-01"
 
+routes = [ { pattern = "pagos.euromedicalpharma.com.co", custom_domain = true } ]
+workers_dev = false
+
 [vars]
 SITE_ORIGIN = "https://euromedicalpharma.com.co"
-PRICES_URL = "https://euromedicalpharma.com.co/assets/precios.json"
+# Mientras el carrito no esté publicado, los precios/envíos se leen de la rama en GitHub.
+# AL PUBLICAR: volver a https://euromedicalpharma.com.co/assets/precios.json y .../envios.json
+PRICES_URL = "https://raw.githubusercontent.com/D4rm4n/euromedical-web/carrito-mercadopago/assets/precios.json"
 MP_SANDBOX = "true"   # cambiar a "false" al usar el Access Token de producción
-ENVIOS_URL = "https://euromedicalpharma.com.co/assets/envios.json"
+ENVIOS_URL = "https://raw.githubusercontent.com/D4rm4n/euromedical-web/carrito-mercadopago/assets/envios.json"
 
 # Dominio propio (opcional, recomendado): pagos.euromedicalpharma.com.co
-# routes = [ { pattern = "pagos.euromedicalpharma.com.co", custom_domain = true } ]
 # El token NO va aquí:  npx wrangler secret put MP_ACCESS_TOKEN

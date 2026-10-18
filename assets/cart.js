@@ -1,6 +1,6 @@
 /* Carrito Euromedical: localStorage + Mercado Pago (Worker) o WhatsApp */
 (()=>{
-const CFG={checkoutUrl:'',wa:'573186995645'}; // checkoutUrl: URL del Worker, p. ej. https://pagos.euromedicalpharma.com.co/checkout (vacío = WhatsApp)
+const CFG={checkoutUrl:'https://pagos.euromedicalpharma.com.co/checkout',wa:'573186995645'}; // checkoutUrl: URL del Worker, p. ej. https://pagos.euromedicalpharma.com.co/checkout (vacío = WhatsApp)
 const base=document.querySelector('script[src*="cart.js"]').src.replace(/cart\.js.*$/,'');
 const KEY='em-cart-v1',cop=n=>'$'+Math.round(n).toLocaleString('es-CO');
 let ready=false,P={},E=null,MUN=[],cart=JSON.parse(localStorage.getItem(KEY)||'{}');
