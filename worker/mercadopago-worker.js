@@ -109,18 +109,47 @@ async function checkout(request, env, h) {
   return json({ id: j.id, init_point: sandbox ? j.sandbox_init_point : j.init_point, sandbox, referencia: ref, subtotal, envio: env_.costo, total: subtotal + env_.costo }, 200, h);
 }
 
+// Valida x-signature (Mercado Pago): manifest "id:<data.id>;request-id:<x-request-id>;ts:<ts>;" HMAC-SHA256 con MP_WEBHOOK_SECRET vs v1
+async function verifySignature(request, url, env) {
+  const sig = request.headers.get('x-signature');
+  if (!sig) return 'missing';
+  if (!env.MP_WEBHOOK_SECRET) return 'no-secret';
+  const parts = Object.fromEntries(sig.split(',').map(p => p.trim().split('=').map(x => x.trim())));
+  const ts = parts.ts, v1 = parts.v1;
+  if (!ts || !v1) return 'invalid';
+  let id = url.searchParams.get('data.id') || '';
+  if (/^[a-z0-9]+$/i.test(id)) id = id.toLowerCase();
+  const rid = request.headers.get('x-request-id');
+  let manifest = '';
+  if (id) manifest += `id:${id};`;
+  if (rid) manifest += `request-id:${rid};`;
+  manifest += `ts:${ts};`;
+  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.MP_WEBHOOK_SECRET), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const mac = new Uint8Array(await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(manifest)));
+  const hex = [...mac].map(b => b.toString(16).padStart(2, '0')).join('');
+  if (hex.length !== v1.length) return 'invalid';
+  let diff = 0; for (let i = 0; i < hex.length; i++) diff |= hex.charCodeAt(i) ^ v1.charCodeAt(i);
+  return diff === 0 ? 'valid' : 'invalid';
+}
+
 async function webhook(request, env) {
   const url = new URL(request.url);
+  const firma = await verifySignature(request, url, env);
+  if (firma === 'invalid') {
+    console.log('WEBHOOK firma inválida', JSON.stringify({ rid: request.headers.get('x-request-id'), q: url.search }));
+    return new Response('invalid signature', { status: 401 });
+  }
+  if (firma !== 'valid') console.log('WEBHOOK sin firma verificable (' + firma + '); se verifica consultando el pago en la API');
   let id = url.searchParams.get('data.id') || url.searchParams.get('id');
   let type = url.searchParams.get('type') || url.searchParams.get('topic');
-  try { const b = await request.json(); id = b?.data?.id || id; type = b?.type || type; } catch {}
+  try { const b = await request.json(); id = b?.data?.id || id; type = b?.type || b?.topic || type; } catch {}
   if (type === 'payment' && id && env.MP_ACCESS_TOKEN) {
+    // La consulta a la API con nuestro token es la fuente de verdad del estado del pago.
     const r = await fetch(`${MP_API}/v1/payments/${encodeURIComponent(id)}`, { headers: { Authorization: `Bearer ${env.MP_ACCESS_TOKEN}` } });
     if (r.ok) {
       const p = await r.json();
-      console.log('PAGO', JSON.stringify({ id: p.id, estado: p.status, ref: p.external_reference, total: p.transaction_amount, metodo: p.payment_method_id, email: p.payer?.email }));
-      // Opcional: guardar en KV / enviar aviso por correo aquí.
-    }
+      console.log('PAGO', JSON.stringify({ firma, id: p.id, estado: p.status, ref: p.external_reference, total: p.transaction_amount, metodo: p.payment_method_id, email: p.payer?.email }));
+    } else console.log('PAGO no encontrado', id, r.status);
   }
   return new Response('ok');
 }
