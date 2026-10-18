@@ -1,0 +1,555 @@
+{
+ "_nota": "Regla: precio web = lo que paga hoy el comprador en MercadoLibre (precio de promoción si la hay). Productos sin publicación exacta usan el precio de su equivalente del mismo tamaño en otra línea (las 4 líneas comparten precios). El Worker usa este archivo como fuente de verdad. Precios agrupados por tamaño (400 g, 700 g, 1000 g): iguales entre líneas dentro del mismo tamaño.",
+ "moneda": "COP",
+ "actualizado": "2026-10-18",
+ "productos": [
+  {
+   "id": "vzf-fosforo-400",
+   "nombre": "VitaZinc-F Fósforo",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p02",
+   "precio": 60214,
+   "fuente": "Publicación propia en MercadoLibre (promo; normal 65.450)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-459959394"
+  },
+  {
+   "id": "vzf-cald-400",
+   "nombre": "VitaZinc-F Cal+D",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p03-v2",
+   "precio": 48000,
+   "fuente": "Publicación propia en MercadoLibre (VitaZinc Calcio+D3)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1417066713"
+  },
+  {
+   "id": "vzf-diabeticos-400",
+   "nombre": "VitaZinc-F Diabéticos",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p04",
+   "precio": 52300,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-2440069142"
+  },
+  {
+   "id": "vzf-gesta-400",
+   "nombre": "VitaZinc-F Gesta",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p05",
+   "precio": 50911,
+   "fuente": "Publicación propia en MercadoLibre (promo; normal 56.568)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-2267013709"
+  },
+  {
+   "id": "vzf-junior-400",
+   "nombre": "VitaZinc-F Junior",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p06",
+   "precio": 50069,
+   "fuente": "Publicación propia en MercadoLibre (promo; normal 58.905)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1838635749"
+  },
+  {
+   "id": "vzf-proteina-400",
+   "nombre": "VitaZinc-F Proteína",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p07",
+   "precio": 58900,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1250834497"
+  },
+  {
+   "id": "vzf-silver-400",
+   "nombre": "VitaZinc-F Silver",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p08",
+   "precio": 52076,
+   "fuente": "Publicación propia en MercadoLibre (promo; normal 62.500)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3173765622"
+  },
+  {
+   "id": "vzf-fibra-400",
+   "nombre": "VitaZinc-F Fibra",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p10",
+   "precio": 45800,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-546819263"
+  },
+  {
+   "id": "vzf-mama-400",
+   "nombre": "VitaZinc-F Mamá",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p11",
+   "precio": 50911,
+   "fuente": "Equivalente: VitaZinc-F Gesta MCO2267013709 (embarazo y lactancia) — confirmado por Alejandro"
+  },
+  {
+   "id": "vzf-adultos-400",
+   "nombre": "VitaZinc-F Adultos",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p12",
+   "precio": 47990,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-657198552"
+  },
+  {
+   "id": "vzf-moringa-400",
+   "nombre": "VitaZinc-F Moringa",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p24",
+   "precio": 65000,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-583375410"
+  },
+  {
+   "id": "vzf-factores-400",
+   "nombre": "VitaZinc-F Factores de Transferencia",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p25",
+   "precio": 68186,
+   "fuente": "Publicación propia en MercadoLibre (promo; normal 82.700)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3335467696"
+  },
+  {
+   "id": "vzf-colageno-400",
+   "nombre": "VitaZinc-F Colágeno + Vit E",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p26",
+   "precio": 62500,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1231574317"
+  },
+  {
+   "id": "vzf-advance-400",
+   "nombre": "VitaZinc-F Advance con HMB",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p27",
+   "precio": 61470,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1231550317"
+  },
+  {
+   "id": "vs-advance-400",
+   "nombre": "VitSure Advance con HMB",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p13",
+   "precio": 48999,
+   "fuente": "Publicación propia MCO1433753679 (400 g). Confirmado: VitaZinc-F Advance cuesta más porque incluye creatina y proteína",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1433753679"
+  },
+  {
+   "id": "vs-advance-1000-v",
+   "nombre": "VitSure Advance con HMB",
+   "presentacion": "1000 g",
+   "detalle": "1000 g · Vainilla gourmet",
+   "img": "p33",
+   "sabor": "Vainilla gourmet",
+   "precio": 79200,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3888932902",
+   "fuente": "Publicación propia MCO3888932902 (promo; normal 105.600; tamaño inferido 1000 g por nivel de precio)"
+  },
+  {
+   "id": "vs-advance-1000-f",
+   "nombre": "VitSure Advance con HMB",
+   "presentacion": "1000 g",
+   "detalle": "1000 g · Fresa",
+   "img": "p34",
+   "sabor": "Fresa",
+   "precio": 79200,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3888932902",
+   "fuente": "Publicación propia MCO3888932902 (promo; normal 105.600; tamaño inferido 1000 g por nivel de precio)"
+  },
+  {
+   "id": "vs-adultos-400",
+   "nombre": "VitSure Adultos",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p14",
+   "precio": 47990,
+   "fuente": "Equivalente: VitaZinc-F Adultos MCO657198552"
+  },
+  {
+   "id": "vs-ninos-400",
+   "nombre": "VitSure Niños",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p15",
+   "precio": 50069,
+   "fuente": "Equivalente: VitaZinc-F Junior MCO1838635749 (promo) — ver conflictos"
+  },
+  {
+   "id": "vs-ninos-1000-v",
+   "nombre": "VitSure Niños",
+   "presentacion": "1000 g",
+   "detalle": "1000 g · Vainilla",
+   "img": "p35",
+   "precio": 92990,
+   "fuente": "Publicación propia MCO546819219 (tamaño inferido 1000 g por nivel de precio)",
+   "sabor": "Vainilla",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-546819219"
+  },
+  {
+   "id": "vs-ninos-1000-f",
+   "nombre": "VitSure Niños",
+   "presentacion": "1000 g",
+   "detalle": "1000 g · Fresa",
+   "img": "p36",
+   "precio": 92990,
+   "fuente": "Publicación propia MCO546819219 (tamaño inferido 1000 g por nivel de precio)",
+   "sabor": "Fresa",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-546819219"
+  },
+  {
+   "id": "vs-colageno-600",
+   "nombre": "VitSure Colágeno Hidrolizado",
+   "presentacion": "600 g",
+   "detalle": "600 g",
+   "img": "p16",
+   "precio": 77700,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4309384776"
+  },
+  {
+   "id": "vs-colageno-mg-600",
+   "nombre": "VitSure Colágeno Hidrolizado + Citrato de Magnesio",
+   "presentacion": "600 g",
+   "detalle": "600 g",
+   "img": "p17",
+   "precio": 82300,
+   "fuente": "Publicación propia en MercadoLibre (Colágeno + Resveratrol)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4309832176"
+  },
+  {
+   "id": "vs-factores-700",
+   "nombre": "VitSure Factores de Transferencia",
+   "presentacion": "700 g",
+   "detalle": "700 g",
+   "img": "p18",
+   "precio": 110000,
+   "fuente": "Factores 700 g = 110.000 para VitaZinc y VitSure (confirmado por Alejandro; MCO961946371)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-961946371"
+  },
+  {
+   "id": "vs-col-marino-400",
+   "nombre": "VitSure Colágeno Marino + Cloruro de Magnesio",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p19",
+   "precio": 70000,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1036920135"
+  },
+  {
+   "id": "vs-calcio-mg-400",
+   "nombre": "VitSure Calcio + Cloruro de Magnesio",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p20",
+   "precio": 62900,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1037000430"
+  },
+  {
+   "id": "vn-fosforo-400",
+   "nombre": "Vitanext Fósforo",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p41",
+   "precio": 60214,
+   "fuente": "Equivalente: VitaZinc-F Fósforo MCO459959394 (promo)"
+  },
+  {
+   "id": "vn-fosforo-700",
+   "nombre": "Vitanext Fósforo",
+   "presentacion": "700 g",
+   "detalle": "700 g",
+   "img": "p28-v2",
+   "precio": 77800,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3333996528"
+  },
+  {
+   "id": "vn-junior-400",
+   "nombre": "Vitanext Junior",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p40",
+   "precio": 50069,
+   "fuente": "Equivalente: VitaZinc-F Junior MCO1838635749 (promo)"
+  },
+  {
+   "id": "vn-junior-700",
+   "nombre": "Vitanext Junior",
+   "presentacion": "700 g",
+   "detalle": "700 g",
+   "img": "p29-v2",
+   "precio": 70500,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3333932574"
+  },
+  {
+   "id": "vn-active-700",
+   "nombre": "Vitanext Active",
+   "presentacion": "700 g",
+   "detalle": "700 g",
+   "img": "p30-v2",
+   "precio": 77700,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3333630914"
+  },
+  {
+   "id": "vn-protector-700",
+   "nombre": "Vitanext Protector",
+   "presentacion": "700 g",
+   "detalle": "700 g",
+   "img": "p31",
+   "precio": 82300,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3333631256"
+  },
+  {
+   "id": "vn-bonecal-700",
+   "nombre": "Vitanext Bone-Cal",
+   "presentacion": "700 g",
+   "detalle": "700 g",
+   "img": "p32-v2",
+   "precio": 75000,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3333944876"
+  },
+  {
+   "id": "vn-silver-400",
+   "nombre": "Vitanext Silver",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p37",
+   "precio": 52076,
+   "fuente": "Equivalente: VitaZinc-F Silver MCO3173765622 (promo)"
+  },
+  {
+   "id": "vn-cald-400",
+   "nombre": "Vitanext Cal+D",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p38",
+   "precio": 48000,
+   "fuente": "Equivalente: VitaZinc-F Calcio+D3 MCO1417066713"
+  },
+  {
+   "id": "vn-adultos-400",
+   "nombre": "Vitanext Adultos",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p39",
+   "precio": 47990,
+   "fuente": "Equivalente: VitaZinc-F Adultos MCO657198552"
+  },
+  {
+   "id": "vn-gesta-400",
+   "nombre": "Vitanext Gesta",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p42",
+   "precio": 50911,
+   "fuente": "Equivalente: VitaZinc-F Gesta MCO2267013709 (promo)"
+  },
+  {
+   "id": "vn-proteina-400",
+   "nombre": "Vitanext Proteína",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p44",
+   "precio": 58900,
+   "fuente": "Equivalente: VitaZinc-F Proteína MCO1250834497"
+  },
+  {
+   "id": "vn-diabeticos-400",
+   "nombre": "Vitanext Diabéticos",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p45",
+   "precio": 52300,
+   "fuente": "Equivalente: VitaZinc-F Diabéticos MCO2440069142"
+  },
+  {
+   "id": "vn-light-400",
+   "nombre": "Vitanext Light",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p46",
+   "precio": 55000,
+   "fuente": "Publicación propia en MercadoLibre",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-3333946916"
+  },
+  {
+   "id": "vn-bonfibra-400",
+   "nombre": "Vitanext Bon Fibra",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p47",
+   "precio": 45800,
+   "fuente": "Equivalente: VitaZinc-F Fibra MCO546819263"
+  },
+  {
+   "id": "vn-factores-400",
+   "nombre": "Vitanext Factores de Transferencia",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p48",
+   "precio": 68186,
+   "fuente": "Equivalente: VitaZinc-F Factores 400 g MCO3335467696 (promo)"
+  },
+  {
+   "id": "az-kids-400",
+   "nombre": "AZ Vital Kids",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p21",
+   "precio": 50069,
+   "fuente": "Equivalente: VitaZinc-F Junior MCO1838635749 (promo)"
+  },
+  {
+   "id": "az-calcio-400",
+   "nombre": "AZ Vital Calcio",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p22",
+   "precio": 48000,
+   "fuente": "Equivalente: VitaZinc-F Calcio+D3 MCO1417066713"
+  },
+  {
+   "id": "az-mama-400",
+   "nombre": "AZ Vital Mamá",
+   "presentacion": "400 g",
+   "detalle": "400 g",
+   "img": "p23-v2",
+   "precio": 50911,
+   "fuente": "Equivalente: VitaZinc-F Gesta MCO2267013709 (promo) — confirmado por Alejandro"
+  },
+  {
+   "id": "vzf-silver-x2",
+   "nombre": "VitaZinc-F Silver x2",
+   "presentacion": "Pack x2",
+   "detalle": "Pack de 2 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 2,
+   "precio": 94999,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-1943906069",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-silver-x3",
+   "nombre": "VitaZinc-F Silver x3",
+   "presentacion": "Pack x3",
+   "detalle": "Pack de 3 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 3,
+   "precio": 129900,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552364094",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-silver-x4",
+   "nombre": "VitaZinc-F Silver x4",
+   "presentacion": "Pack x4",
+   "detalle": "Pack de 4 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 4,
+   "precio": 160000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552564548",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-silver-x5",
+   "nombre": "VitaZinc-F Silver x5",
+   "presentacion": "Pack x5",
+   "detalle": "Pack de 5 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 5,
+   "precio": 187500,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552565812",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-silver-x6",
+   "nombre": "VitaZinc-F Silver x6",
+   "presentacion": "Pack x6",
+   "detalle": "Pack de 6 tarros de 400 g · Vainilla",
+   "img": "p08",
+   "pack": 6,
+   "precio": 210000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552566202",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-fosforo-x2",
+   "nombre": "VitaZinc-F Fósforo x2",
+   "presentacion": "Pack x2",
+   "detalle": "Pack de 2 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 2,
+   "precio": 94999,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-2298549127",
+   "fuente": "Publicación más nueva MCO2298549127 (no la antigua MCO657199555 de 100.500)"
+  },
+  {
+   "id": "vzf-fosforo-x3",
+   "nombre": "VitaZinc-F Fósforo x3",
+   "presentacion": "Pack x3",
+   "detalle": "Pack de 3 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 3,
+   "precio": 129000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552554286",
+   "fuente": "Publicación más nueva MCO4552554286"
+  },
+  {
+   "id": "vzf-fosforo-x4",
+   "nombre": "VitaZinc-F Fósforo x4",
+   "presentacion": "Pack x4",
+   "detalle": "Pack de 4 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 4,
+   "precio": 160000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-2298550017",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-fosforo-x5",
+   "nombre": "VitaZinc-F Fósforo x5",
+   "presentacion": "Pack x5",
+   "detalle": "Pack de 5 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 5,
+   "precio": 187500,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552529752",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "vzf-fosforo-x6",
+   "nombre": "VitaZinc-F Fósforo x6",
+   "presentacion": "Pack x6",
+   "detalle": "Pack de 6 tarros de 400 g · Vainilla",
+   "img": "p02",
+   "pack": 6,
+   "precio": 210000,
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4552529896",
+   "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  }
+ ]
+}
