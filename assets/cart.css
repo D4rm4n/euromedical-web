@@ -58,3 +58,18 @@
 .pack-price{font:900 1.5rem var(--ff-h);color:#FFC531;margin:0}
 .pack-unit{font-size:.8rem;color:#A9B7CC;margin:0}
 .pack-card .pcard-actions{margin-top:auto}
+/* Encuéntranos en MercadoLibre */
+.mlr{padding-block:48px}
+.mlr-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.mlr-head h2{font-size:clamp(1.3rem,3vw,1.7rem);margin:.2em 0}
+.mlr-head p{margin:0;color:#A9B7CC}
+.mlr-link{font-size:.85rem;color:#A9B7CC!important;text-decoration:underline;text-underline-offset:3px}
+.mlr-link:hover{color:#FFE600!important}
+.mlr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.mlr-card{margin:0;padding:16px;border-radius:16px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:1px solid rgba(255,230,0,.18)}
+.mlr-stars{color:#FFE600;letter-spacing:2px;text-shadow:0 0 10px rgba(255,230,0,.4)}
+.mlr-off{color:rgba(255,255,255,.2);text-shadow:none}
+.mlr-card blockquote{margin:8px 0;font-size:.9rem;line-height:1.5;color:#E7EEF9}
+.mlr-card figcaption{font-size:.75rem;color:#A9B7CC}
+.mlr-note{font-size:.75rem;color:#7F8DA3;margin-top:10px}
+.cart-was{opacity:.65;font-weight:600;margin-right:2px}.cart-off{font-style:normal;font-size:.75em;background:#FF3D6E;color:#fff!important;padding:1px 6px;border-radius:8px;margin-left:4px}.ci-p .cart-was{color:#A9B7CC}
