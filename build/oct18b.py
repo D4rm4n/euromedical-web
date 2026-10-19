@@ -56,3 +56,4 @@ for _f in _g.glob(_R+'**/*.html',recursive=True):
             s=s[:a]+PR+'\n\n'+C+'\n\n'+P+s[b:]
     if s!=o: open(_f,'w').write(s)
 print('oct18b ok', {a[:40]:n for a,n in _used.items()})
+exec(open('/workspace/euromedical-web/build/og.py').read())
