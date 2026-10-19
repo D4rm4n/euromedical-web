@@ -161,6 +161,7 @@ export default {
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: h });
     if (request.method === 'POST' && url.pathname === '/checkout') return checkout(request, env, h);
     if (request.method === 'POST' && url.pathname === '/webhook') return webhook(request, env);
-    return json({ ok: true, servicio: 'pagos Euromedical' }, 200, h);
+    if (url.pathname === '/') return json({ ok: true, servicio: 'pagos Euromedical' }, 200, h);
+    return new Response('Not found', { status: 404, headers: { ...h, 'Content-Type': 'text/plain; charset=utf-8' } });
   },
 };
