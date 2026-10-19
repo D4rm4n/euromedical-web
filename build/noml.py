@@ -68,3 +68,4 @@ if 'id="mercadolibre"' not in _s:
     _k=_s.find('<section class="section follow" id="siguenos"')
     if _k>0: _s=_s[:_k]+_MLSEC+'\n\n'+_s[_k:]; open(_ix,'w').write(_s)
 print('mlr ok')
+exec(open('/workspace/euromedical-web/build/oct18b.py').read())
