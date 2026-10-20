@@ -16,3 +16,5 @@ for (p,x,y) in [(19,690,70),(33,900,140),(28,770,320)]:
     msk=Image.new('L',(250,250),0); ImageDraw.Draw(msk).rounded_rectangle((0,0,249,249),radius=26,fill=255)
     og.paste(t,(x,y),msk)
 og.save('assets/img/og-image.jpg',quality=85)
+
+exec(open('/workspace/euromedical-web/build/producto.py').read())
