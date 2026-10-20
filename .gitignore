@@ -3,3 +3,4 @@ _src/
 *.py
 *.bak*
 .DS_Store
+*.whl
