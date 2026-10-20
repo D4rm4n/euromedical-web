@@ -46,6 +46,7 @@ for _f in _g.glob(_R+'**/*.html',recursive=True):
         return f'<a class="{cls}" href="{pre}productos.html">{_CART}<span>Ver productos</span></a>'
     re_href=lambda a:_re.search(r'href="([^"]*)"',a).group(1)
     s=_re.sub(_ML,other,s,flags=_re.S)
+    s=s.replace('Compra en MercadoLibre o pide por WhatsApp.','Compra aquí en la página con envío a todo Colombia o pide por WhatsApp.')
     if s!=o: open(_f,'w').write(s)
 print('noml ok, enlaces cambiados:',_n)
 # ---- Home: sección pequeña "Encuéntranos en MercadoLibre" (única salida a ML permitida)
