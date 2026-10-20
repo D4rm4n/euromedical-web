@@ -1,0 +1,34 @@
+{
+ "vzf-fosforo-400": {
+  "slug": "vitazinc-f-fosforo",
+  "linea": "VitaZinc-F", "linea_url": "vitazinc-f.html", "tag": "vitazinc",
+  "nombre": "VitaZinc-F Fósforo",
+  "img": "p02",
+  "galeria": ["p02"],
+  "sabor": "Vainilla",
+  "presentacion": "Tarro de 400 g",
+  "resumen": "Con fosfolípidos y nutrientes energéticos. Complemento nutricional para épocas de estudio y trabajo. Libre de azúcar.",
+  "_fuente_resumen": "Texto de la tarjeta del sitio (vitazinc-f.html) basado en el catálogo Google Slides (VZ-01)",
+  "descripcion": [
+   "VitaZinc-F Fósforo tiene un alto contenido de fosfolípidos que fortalecen el desempeño cognoscitivo, además de nutrientes energéticos que mejoran el perfil intelectual. Libre de azúcar.",
+   "Es un alimento en polvo con vitaminas y minerales, pensado para complementar tu alimentación en jornadas de estudio y de trabajo. Se prepara en segundos y tiene sabor vainilla.",
+   "Es nuestro producto más vendido y lo fabricamos en Bogotá."
+  ],
+  "_fuente_descripcion": "Párrafo 1: catálogo Google Slides VZ-01. Párrafo 2: descripción de la publicación MercadoLibre (/workspace/mercadolibre/descripcion-vitazinc-fosforo.txt). Párrafo 3: textos del sitio.",
+  "para_quien": "Estudiantes, profesionales y adultos con jornadas exigentes que quieren complementar su alimentación.",
+  "_fuente_para_quien": "Descripción MercadoLibre y textos del sitio",
+  "edad_ph": "Edad recomendada y uso en niños: por confirmar con la etiqueta (la publicación de MercadoLibre dice “a partir de los 4 años”; falta validarlo).",
+  "porcion": "Porción de 17 g · 26 porciones por envase",
+  "_fuente_porcion": "Tabla nutricional de la etiqueta (foto 8 de la publicación MercadoLibre)",
+  "preparacion": ["Agrega una porción (17 g) a tu bebida favorita: agua o leche.", "Mezcla o agita hasta disolver.", "Puedes tomarlo en la mañana para empezar tu día."],
+  "_fuente_preparacion": "Método de consumo de la publicación MercadoLibre MCO459959394",
+  "preparacion_ph": "Por confirmar: equivalencia de la porción en cucharadas/medidas, cantidad de líquido (ml) y cuántas veces al día.",
+  "nutricion": [["Tamaño de porción","17 g"],["Porciones por envase","26"],["Calorías","60"],["Grasa total","0 g"],["Carbohidrato total","14 g"],["Azúcares","3 g"],["Proteína","1 g"],["Fósforo","70 % VD"],["Calcio","80 % VD"],["Vitaminas B1, B2, B6, B12, niacina y biotina","100 % VD"],["Ácido fólico","90 % VD"],["Zinc · Hierro","45 % VD"],["Magnesio · Ácido pantoténico","40 % VD"]],
+  "_fuente_nutricion": "Transcrito de la foto de la tabla nutricional (foto 8, MercadoLibre); resolución baja, verificar con el tarro",
+  "info": ["Es un complemento nutricional. No es un medicamento y no reemplaza una alimentación balanceada.", "Si estás en embarazo o lactancia, tomas medicamentos o tienes alguna condición de salud, consulta a tu médico antes de consumirlo.", "Consérvalo en un lugar fresco y seco, con la tapa bien cerrada."],
+  "info_ph": "Por confirmar: registro sanitario vigente (la etiqueta muestra un RSA y MercadoLibre un NSA distinto), gluten y lactosa (las fuentes se contradicen), peso exacto (400 g o 440 g).",
+  "videos": [{"src":"assets/video/fosforo.mp4","poster":"assets/video/fosforo-poster.webp","titulo":"VitaZinc-F Fósforo en 40 segundos"}],
+  "variantes": ["vzf-fosforo-x2","vzf-fosforo-x3","vzf-fosforo-x4","vzf-fosforo-x5","vzf-fosforo-x6","vn-fosforo-400","vn-fosforo-700"],
+  "relacionados": ["vzf-silver-400","vzf-junior-400","vzf-factores-400"]
+ }
+}

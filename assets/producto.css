@@ -1,0 +1,29 @@
+.pd-top{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;margin:18px 0 36px}
+.pd-media{perspective:1000px}
+.pd-zoom{position:relative;overflow:hidden;border-radius:22px;background:radial-gradient(circle at 50% 40%,#fff,#dfe7f1);box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08);transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease;cursor:zoom-in}
+.pd-zoom img{display:block;width:100%;height:auto;transition:transform .25s ease;transform-origin:var(--zx,50%) var(--zy,50%)}
+.pd-zoom.is-z img{transform:scale(2)}
+.pd-hint{font-size:.85rem;opacity:.7;text-align:center;margin-top:10px}
+.pd-info h1{font-size:clamp(2rem,4vw,3rem);margin:.3em 0 .2em}
+.pd-lead{font-size:1.1rem;opacity:.9}
+.pd-specs{margin:16px 0}
+.pd-price{font:800 clamp(2rem,4vw,2.6rem)/1 Montserrat,sans-serif;margin:14px 0 6px}
+.pd-price small{font-size:.9rem;opacity:.7}
+.pd-ship{font-size:.92rem;opacity:.8}
+.pd-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.pd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.pd-block{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px}
+.pd-block h2{font-size:1.25rem;margin:0 0 10px}
+.pd-wide{grid-column:1/-1}
+.pd-nut{width:100%;border-collapse:collapse}.pd-nut th,.pd-nut td{padding:8px 6px;border-bottom:1px solid rgba(255,255,255,.1);text-align:left}.pd-nut td{text-align:right;font-weight:600}
+.pd .ph{background:#fff3c4;color:#5b4300 !important;font-weight:600;border:2px dashed #e0a800;border-radius:10px;padding:10px 12px;font-size:.92rem;margin-top:12px}
+.pd-h{margin:42px 0 16px}
+.pd-videos{display:flex;gap:18px;flex-wrap:wrap}
+.pd-video{margin:0;max-width:320px}.pd-video video{width:100%;height:auto;border-radius:16px;background:#000}
+.pd-minis{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.pd-mini{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:12px}
+.pd-mini img{width:96px;height:96px;border-radius:12px;background:#fff;object-fit:cover}
+.pd-mini h3{font-size:1rem;margin:0}.pd-mini h3 a{color:inherit}
+.pd-mini-meta{font-size:.82rem;opacity:.75;margin:2px 0}.pd-mini-price{font-weight:800;margin:2px 0 6px}
+.pcard-link{color:inherit;text-decoration:none}.pcard-img .pcard-link{display:block}
+@media (max-width:760px){.pd-top,.pd-grid{grid-template-columns:1fr}}
