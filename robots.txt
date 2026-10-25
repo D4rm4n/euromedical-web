@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /falabella-img/
 Sitemap: https://euromedicalpharma.com.co/sitemap.xml
