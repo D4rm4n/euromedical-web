@@ -1,0 +1,138 @@
+{
+ "_defaults": {
+  "_nota": "Indicado por Alejandro (20 oct 2026). Aplica a todos los productos salvo excepción.",
+  "preparacion": [
+   "Agrega 2 cucharadas en 250 ml de agua, leche o tu bebida preferida.",
+   "Mezcla bien hasta disolver; no deja grumos.",
+   "Disfruta. Ideal para tomar por las mañanas."
+  ],
+  "cuanto": "2 cucharadas en 250 ml de agua, leche o tu bebida preferida.",
+  "_excepciones": {
+   "fibra": {
+    "_aplica_a": "VitaZinc-F Fibra (vzf-fibra-*) y cualquier producto Fibra",
+    "preparacion": [
+     "Agrega 2 cucharadas en 250 ml de agua o jugo cítrico.",
+     "Mezcla bien hasta disolver."
+    ],
+    "cuanto": "2 cucharadas en 250 ml de agua o jugo cítrico."
+   }
+  }
+ },
+ "vzf-fosforo-400": {
+  "slug": "vitazinc-f-fosforo",
+  "linea": "VitaZinc-F",
+  "linea_url": "vitazinc-f.html",
+  "tag": "vitazinc",
+  "nombre": "VitaZinc-F Fósforo",
+  "img": "p02",
+  "galeria": [
+   "p02"
+  ],
+  "sabor": "Vainilla",
+  "presentacion": "Tarro de 400 g",
+  "resumen": "Suplemento nutricional en polvo para nutrir el cerebro y mejorar el rendimiento diario. Ideal para estudiantes, profesionales y niños en etapa escolar (a partir de los 4 años). Libre de azúcar.",
+  "_fuente_resumen": "Texto de la tarjeta del sitio (vitazinc-f.html) basado en el catálogo Google Slides (VZ-01)",
+  "descripcion": [
+   "¿Sientes fatiga mental, falta de concentración o quieres apoyar el desarrollo cognitivo de tus hijos? VitaZinc-F Fósforo es el suplemento nutricional en polvo diseñado específicamente para nutrir el cerebro y mejorar el rendimiento diario.",
+   "Enfoque y memoria: alto contenido de fósforo, el mineral clave para mantener la concentración, agilizar la memoria y reducir el cansancio mental.",
+   "Delicioso sabor vainilla: su formato en polvo de fácil disolución es perfecto para mezclar con leche, agua o tus batidos favoritos sin dejar grumos.",
+   "Nutrición completa: cada porción de 17 g entrega un alto valor nutricional para que tu cerebro funcione al 100 % durante todo el día.",
+   "Fácil digestión: totalmente libre de gluten (apto para personas tolerantes a la lactosa).",
+   "Al ser fabricantes, garantizamos la pureza y calidad de cada ingrediente. Libre de azúcar."
+  ],
+  "_fuente_descripcion": "Descripción verbatim de la publicación MercadoLibre MCO459959394 (captura guardada 8 oct 2026, /workspace/mercadolibre/listing-MCO459959394.md)",
+  "para_quien": "Ideal para estudiantes, profesionales y niños en etapa escolar (a partir de los 4 años).",
+  "_fuente_para_quien": "Descripción MercadoLibre y textos del sitio",
+  "porcion": "Porción de 17 g · 26 porciones por tarro de 400 g",
+  "_fuente_porcion": "Tabla nutricional de la etiqueta (foto 8 de la publicación MercadoLibre)",
+  "_fuente_preparacion": "Default de Alejandro (_defaults); reemplaza el método de MercadoLibre",
+  "nutricion": [
+   [
+    "Tamaño de porción",
+    "17 g"
+   ],
+   [
+    "Porciones por tarro de 400 g",
+    "26"
+   ],
+   [
+    "Calorías",
+    "60"
+   ],
+   [
+    "Grasa total",
+    "0 g"
+   ],
+   [
+    "Carbohidrato total",
+    "14 g"
+   ],
+   [
+    "Azúcares",
+    "3 g"
+   ],
+   [
+    "Proteína",
+    "1 g"
+   ],
+   [
+    "Fósforo",
+    "70 % VD"
+   ],
+   [
+    "Calcio",
+    "80 % VD"
+   ],
+   [
+    "Vitaminas B1, B2, B6, B12, niacina y biotina",
+    "100 % VD"
+   ],
+   [
+    "Ácido fólico",
+    "90 % VD"
+   ],
+   [
+    "Zinc · Hierro",
+    "45 % VD"
+   ],
+   [
+    "Magnesio · Ácido pantoténico",
+    "40 % VD"
+   ]
+  ],
+  "_fuente_nutricion": "Transcrito de la foto de la tabla nutricional (foto 8, MercadoLibre); resolución baja, verificar con el tarro",
+  "info": [
+   "Registro sanitario: NSA-2801-2025.",
+   "Libre de gluten (apto para personas tolerantes a la lactosa).",
+   "Producto nuevo y sellado. Garantía de fábrica: 8 días.",
+   "Es un complemento nutricional. No es un medicamento y no reemplaza una alimentación balanceada.",
+   "Consérvalo en un lugar fresco y seco, con la tapa bien cerrada."
+  ],
+  "videos": [
+   {
+    "src": "assets/video/fosforo-narrado.mp4",
+    "poster": "assets/video/fosforo-narrado-poster.webp",
+    "titulo": "VitaZinc-F Fósforo, explicado por nuestro equipo"
+   },
+   {
+    "src": "assets/video/fosforo.mp4",
+    "poster": "assets/video/fosforo-poster.webp",
+    "titulo": "VitaZinc-F Fósforo en 40 segundos"
+   }
+  ],
+  "variantes": [
+   "vzf-fosforo-x2",
+   "vzf-fosforo-x3",
+   "vzf-fosforo-x4",
+   "vzf-fosforo-x5",
+   "vzf-fosforo-x6",
+   "vn-fosforo-400",
+   "vn-fosforo-700"
+  ],
+  "relacionados": [
+   "vzf-silver-400",
+   "vzf-junior-400",
+   "vzf-factores-400"
+  ]
+ }
+}
