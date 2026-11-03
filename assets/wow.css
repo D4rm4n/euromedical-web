@@ -82,3 +82,8 @@ body.wow .car-track{padding-block:26px;perspective:1200px}
 @media (prefers-reduced-motion:reduce){body.wow .pcard{transform:none!important}body.wow .pcard-img img{animation:none!important;transform:none}body.wow .pcard-img::after{animation:none}body.wow .pcard-body{transform:none}}
 body.wow .promos,body.wow .page-hero,body.wow .page-cta{background:transparent!important}body.wow .promo-body,body.wow .promo-body *{color:var(--ink)}body.wow .promo-price s{color:var(--muted)}html{scroll-behavior:auto}
 body.wow .chip{background:rgba(255,255,255,.06)!important;color:var(--ink)!important;border-color:rgba(46,230,255,.25)!important}body.wow .chip.is-active{background:linear-gradient(90deg,#1565C0,#2EE6FF)!important;color:#04101F!important}
+/* fix contraste: tarjetas claras bajo tema oscuro (maquila .steps, blog .hub-grid) */
+body.wow .steps li,body.wow .hub-grid .pd-mini{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015))!important;border:1px solid rgba(46,230,255,.14)!important;color:var(--ink)}
+body.wow .steps p,body.wow .hub-grid .pd-mini-meta{color:var(--muted)}
+body.wow .hub-grid .pd-mini img{background:#fff;border-radius:10px}
+body.wow .secs a{border-color:rgba(46,230,255,.3)}
