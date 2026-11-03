@@ -87,3 +87,7 @@ body.wow .steps li,body.wow .hub-grid .pd-mini{background:linear-gradient(160deg
 body.wow .steps p,body.wow .hub-grid .pd-mini-meta{color:var(--muted)}
 body.wow .hub-grid .pd-mini img{background:#fff;border-radius:10px}
 body.wow .secs a{border-color:rgba(46,230,255,.3)}
+/* badge "Desde 500 unidades" (maquila): azul medio con texto blanco */
+body.wow .maq-badge{background:#1e5bb8!important;color:#fff!important;box-shadow:0 0 0 5px rgba(255,255,255,.9),0 0 0 8px var(--neon2),0 10px 30px rgba(30,91,184,.45)}
+body.wow .maq-badge span{color:#fff!important;opacity:.95}
+body.wow .maq-badge strong{color:#FFC531!important;text-shadow:0 1px 2px rgba(0,0,0,.25)}
