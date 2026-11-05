@@ -1,7 +1,7 @@
 {
  "_nota": "Regla: precio web = lo que paga hoy el comprador en MercadoLibre (precio de promoción si la hay). Productos sin publicación exacta usan el precio de su equivalente del mismo tamaño en otra línea (las 4 líneas comparten precios). El Worker usa este archivo como fuente de verdad. Precios agrupados por tamaño (400 g, 700 g, 1000 g): iguales entre líneas dentro del mismo tamaño.",
  "moneda": "COP",
- "actualizado": "2026-10-18",
+ "actualizado": "2026-11-05",
  "productos": [
   {
    "id": "vn-premium-400",
@@ -572,6 +572,18 @@
    "precio": 210000,
    "ml": "https://articulo.mercadolibre.com.co/MCO-4552529896",
    "fuente": "Precio actual de la publicación en MercadoLibre (18 oct 2026)"
+  },
+  {
+   "id": "em-creatina-1000",
+   "nombre": "Creatina Monohidratada",
+   "presentacion": "1000 g",
+   "detalle": "1000 g · Sin sabor",
+   "img": "p49",
+   "precio": 87300,
+   "antes": 100000,
+   "descuento": 12,
+   "fuente": "Publicación propia MCO4453400606 (promo pública 12% OFF; normal 100.000)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4453400606"
   }
  ]
 }

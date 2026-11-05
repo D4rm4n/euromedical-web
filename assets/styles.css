@@ -130,6 +130,7 @@ p{margin:0 0 1em}
 .tag-vitsure{background:#EFE9FB;color:#5B2DA6}
 .tag-vitanext{background:#E4F4F1;color:#0C6B5B}
 .tag-azvital{background:#FDF0D5;color:#8A5300}
+.tag-creatina{background:#E8EEF8;color:#1e3a6e}
 .specs{list-style:none;padding:0;margin:0 0 10px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.85rem;color:var(--ink);font-weight:600}
 .specs span{display:block;font-weight:400;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .pcard-actions{display:flex;flex-direction:column;gap:6px;align-items:stretch}
