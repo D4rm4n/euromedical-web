@@ -584,6 +584,28 @@
    "descuento": 12,
    "fuente": "Publicación propia MCO4453400606 (promo pública 12% OFF; normal 100.000)",
    "ml": "https://articulo.mercadolibre.com.co/MCO-4453400606"
+  },
+  {
+   "id": "em-creatina-500",
+   "nombre": "Creatina Monohidratada",
+   "presentacion": "500 g",
+   "detalle": "500 g · Sin sabor",
+   "img": "p50",
+   "precio": 50915,
+   "fuente": "Publicación propia MCO4441058260 (promo pública 15% OFF; normal 59.900)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4441058260",
+   "antes": 59900,
+   "descuento": 15
+  },
+  {
+   "id": "em-creatina-300",
+   "nombre": "Creatina Monohidratada",
+   "presentacion": "300 g",
+   "detalle": "300 g · Sin sabor",
+   "img": "p51",
+   "precio": 35000,
+   "fuente": "Publicación propia MCO4510887790 (precio panel/listado $35.000)",
+   "ml": "https://articulo.mercadolibre.com.co/MCO-4510887790"
   }
  ]
 }
