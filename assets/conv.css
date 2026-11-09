@@ -1,0 +1,27 @@
+/* Conversión: Dónde comprar + CTAs de compra (9 nov 2026) */
+.buy-cta{margin:1.6em 0;padding:16px 18px;border-radius:14px;background:linear-gradient(160deg,rgba(46,230,255,.10),rgba(255,255,255,.03));border:1px solid rgba(46,230,255,.28);border-left:5px solid #F5DC00}
+.buy-cta p{margin:0 0 10px}
+.buy-cta-k{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;opacity:.8}
+.buy-cta-btns{display:flex;flex-wrap:wrap;gap:8px}
+.buy-cta-btns .btn{flex:1 1 180px;justify-content:center;text-decoration:none}
+.buy-cta-end{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start}
+.buy-cta-img img{width:96px;height:96px;object-fit:contain;background:#fff;border-radius:10px;display:block}
+.buy-cta-more{margin:10px 0 0!important;font-size:.88rem;opacity:.9}
+@media (max-width:520px){.buy-cta-end{grid-template-columns:1fr}.buy-cta-img img{width:110px;height:110px}.buy-cta-btns .btn{flex:1 1 100%}}
+.pd-where{margin:10px 0 0;font-size:.9rem;opacity:.9}
+.pd-actions .btn-ml{text-decoration:none}
+.where-mini{display:grid;gap:14px;align-items:center;padding:18px 20px;border-radius:14px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(46,230,255,.14);border-left:5px solid #F5DC00}
+.where-mini h2{margin:0;font-size:1.25rem}
+.where-mini .kicker{margin:0 0 4px}
+.where-btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.where-btns .btn{flex:1 1 160px;justify-content:center}
+.where-more{font-weight:600;white-space:nowrap}
+@media (min-width:860px){.where-mini{grid-template-columns:minmax(220px,1fr) 2fr}}
+.where-sec{padding-top:18px;padding-bottom:18px}
+.where-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:22px 0}
+.where-card{padding:22px;border-radius:16px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(46,230,255,.14);display:flex;flex-direction:column;gap:10px}
+.where-card h2{margin:0;font-size:1.25rem}
+.where-card ul{margin:0;padding-left:1.1em}
+.where-card .btn{margin-top:auto;justify-content:center}
+@media (min-width:960px){.nav a{white-space:nowrap}}
+@media (min-width:960px) and (max-width:1180px){body .nav a:not(.btn){padding:8px 6px!important;font-size:.84rem!important}.nav{gap:2px!important}}
