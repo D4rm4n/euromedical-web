@@ -25,3 +25,14 @@
 .where-card .btn{margin-top:auto;justify-content:center}
 @media (min-width:960px){.nav a{white-space:nowrap}}
 @media (min-width:960px) and (max-width:1180px){body .nav a:not(.btn){padding:8px 6px!important;font-size:.84rem!important}.nav{gap:2px!important}}
+
+.btn-falabella{background:#AAD500;color:#111;border-color:#AAD500}
+.btn-falabella:hover{background:#96C000;box-shadow:0 4px 14px rgba(80,110,0,.25)}
+body.wow .btn-falabella,body.wow .btn-falabella span{color:#111!important}
+.falabella-gallery-lead{margin:8px 0 10px;font-weight:600}
+.falabella-gallery{display:grid;gap:12px;grid-template-columns:1fr;margin:0 0 28px}
+@media (min-width:700px){.falabella-gallery{grid-template-columns:repeat(3,1fr)}}
+.falabella-gallery a{display:block;border-radius:12px;overflow:hidden;border:1px solid rgba(46,230,255,.14);background:#fff}
+.falabella-gallery img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover;object-position:top center;transition:transform .25s}
+.falabella-gallery a:hover img{transform:scale(1.03)}
+.falabella-gallery a:focus-visible{outline:2px solid #AAD500;outline-offset:3px}
