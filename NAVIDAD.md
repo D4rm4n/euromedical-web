@@ -1,6 +1,6 @@
 # Ambiente navideño
 
-Decoración temporal (guirnalda de luces, saludo, adornos y nieve suave) para el sitio de Euromedical.
+Decoración temporal (guirnalda de luces de colores, saludo, adornos, nieve suave y, en el inicio, un árbol con estrella) para el sitio de Euromedical.
 
 No cambia precios, fichas de producto ni textos de salud. No usa imágenes con copyright ni librerías externas.
 
@@ -13,5 +13,5 @@ El JS añade la clase `xmas` en `<html>`. Todo el CSS navideño está bajo `html
 
 ## Qué incluye
 
-- `assets/christmas.css` — luces en el header, franja de saludo, acentos suaves en botones y hero.
-- `assets/christmas.js` — inserta el banner «Feliz Navidad de parte de Euromedical», dos adornos SVG y una nieve ligera (`pointer-events: none`). Menos copos en móvil; sin nieve si el usuario pide `prefers-reduced-motion`.
+- `assets/christmas.css` — luces de colores en el header, franja de saludo, árbol y estrella, acentos suaves en botones y hero.
+- `assets/christmas.js` — inserta el banner «En esta Navidad, regala salud a los tuyos y comparte en familia», adornos SVG, luces, nieve ligera (`pointer-events: none`) y, solo en la portada (escritorio), un árbol a un lado del hero con el lema «de parte de Euromedical». Menos copos y adornos en móvil; sin nieve ni destellos si el usuario pide `prefers-reduced-motion`.
