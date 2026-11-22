@@ -1,0 +1,166 @@
+/* Ambiente navideño Euromedical (noviembre–enero).
+   Todas las reglas van bajo html.xmas para poder apagarlo fácil.
+   Para quitarlo: elimine este archivo y assets/christmas.js de las páginas,
+   o ponga EUROMEDICAL_XMAS = false al inicio de christmas.js.
+   Ver /NAVIDAD.md
+*/
+
+html.xmas{
+  --xmas-pine:#1B3D30;
+  --xmas-pine-2:#24533F;
+  --xmas-gold:#D6B26E;
+  --xmas-gold-soft:#F3D58F;
+  --xmas-cream:#FFF8E7;
+  --xmas-berry:#8E2A2A;
+  --xmas-berry-soft:#C45C5C;
+}
+
+/* Luces / guirnalda a lo largo del borde superior del header.
+   12px de alto, pointer-events:none, no tapa logo, menú ni botones. */
+html.xmas .site-header{
+  border-bottom-color:var(--xmas-gold);
+  overflow:visible;
+}
+html.xmas .site-header::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;
+  height:11px;
+  pointer-events:none;
+  z-index:3;
+  background:
+    radial-gradient(circle at 8px 6px,#F8E7A0 0 2.1px,#E8C85A 2.3px 3.1px,transparent 3.3px) 0 0/28px 11px,
+    radial-gradient(circle at 22px 5px,#E36A6A 0 2px,#B83C3C 2.2px 2.8px,transparent 3px) 0 0/28px 11px,
+    radial-gradient(circle at 15px 7px,#8BE0A8 0 1.7px,#3FA86A 1.9px 2.5px,transparent 2.7px) 0 0/28px 11px,
+    linear-gradient(#C9A45A,#C9A45A) 0 3px/100% 1.5px no-repeat,
+    linear-gradient(180deg,rgba(27,61,48,.45),transparent);
+  box-shadow:0 1px 6px rgba(214,178,110,.25);
+}
+
+/* Destello suave de las luces (se apaga solo con prefers-reduced-motion, regla global del sitio). */
+html.xmas .site-header::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;
+  height:11px;
+  pointer-events:none;
+  z-index:4;
+  background:
+    radial-gradient(circle at 8px 6px,rgba(255,248,220,.95) 0 1.4px,transparent 2.6px) 0 0/28px 11px;
+  animation:xmas-twinkle 2.4s ease-in-out infinite alternate;
+  opacity:.7;
+}
+@keyframes xmas-twinkle{
+  from{opacity:.25}
+  to{opacity:.95}
+}
+
+/* Franja de saludo: entra en el flujo, no es sticky, no tapa la compra. */
+.xmas-banner{
+  position:relative;
+  z-index:1;
+  background:linear-gradient(90deg,var(--xmas-pine),var(--xmas-pine-2) 45%,var(--xmas-pine));
+  color:var(--xmas-cream);
+  border-bottom:1px solid var(--xmas-gold);
+  font-family:var(--ff-h),Montserrat,system-ui,sans-serif;
+  overflow:visible;
+}
+.xmas-banner-in{
+  max-width:1180px;
+  margin:0 auto;
+  padding:7px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  text-align:center;
+  min-height:34px;
+}
+.xmas-banner p{
+  margin:0;
+  font-size:.92rem;
+  font-weight:700;
+  letter-spacing:.04em;
+  line-height:1.3;
+  color:var(--xmas-cream);
+}
+.xmas-banner .xmas-star{
+  color:var(--xmas-gold-soft);
+  font-style:normal;
+  font-weight:700;
+}
+
+/* Adornos colgantes (SVG), no interceptan clics. */
+.xmas-hang{
+  position:absolute;
+  top:100%;
+  width:22px;
+  height:42px;
+  pointer-events:none;
+  z-index:2;
+}
+.xmas-hang-l{left:max(8px,calc((100% - 1180px)/2 + 12px))}
+.xmas-hang-r{right:max(8px,calc((100% - 1180px)/2 + 12px))}
+.xmas-hang svg{display:block;width:22px;height:42px}
+
+/* Nieve: capa fija, no intercepta clics, por debajo del header/WA/carrito. */
+.xmas-snow{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:45;
+  overflow:hidden;
+  contain:strict;
+}
+.xmas-flake{
+  position:absolute;
+  top:-12px;
+  left:var(--x,50%);
+  width:var(--s,5px);
+  height:var(--s,5px);
+  border-radius:50%;
+  background:rgba(255,255,255,.82);
+  box-shadow:0 0 5px rgba(255,255,255,.45);
+  opacity:.75;
+  animation:xmas-fall var(--d,14s) linear var(--delay,0s) infinite;
+  will-change:transform;
+}
+@keyframes xmas-fall{
+  0%{transform:translate3d(0,-10px,0)}
+  100%{transform:translate3d(var(--drift,16px),110vh,0)}
+}
+
+/* Acentos sutiles en botones primarios y el hero: no cambian el color de marca ni el de WhatsApp. */
+html.xmas .btn-primary{
+  box-shadow:0 0 0 1px rgba(214,178,110,.4),0 8px 20px rgba(11,46,89,.14);
+}
+html.xmas .hero{
+  background:
+    radial-gradient(900px 420px at 8% -20%,rgba(214,178,110,.18),transparent 55%),
+    radial-gradient(1200px 500px at 85% -10%,var(--pale),transparent 60%),
+    linear-gradient(180deg,var(--wash),#fff);
+}
+html.xmas body.wow .hero,
+html.xmas .wow-hero{
+  box-shadow:inset 0 1px 0 rgba(214,178,110,.28);
+}
+
+/* Móvil: menos nieve (lo decide el JS) y adornos más chicos; nada tapa el menú ni el WA. */
+@media (max-width:700px){
+  .xmas-banner-in{padding:6px 14px;min-height:30px}
+  .xmas-banner p{font-size:.8rem;letter-spacing:.02em}
+  .xmas-hang{width:16px;height:30px}
+  .xmas-hang svg{width:16px;height:30px}
+  .xmas-hang-l{left:4px}
+  .xmas-hang-r{right:4px}
+}
+@media (max-width:380px){
+  .xmas-hang{display:none}
+}
+
+/* Respeto a reduced-motion: el sitio ya anula animaciones, pero por si se carga solo este CSS. */
+@media (prefers-reduced-motion:reduce){
+  html.xmas .site-header::after,
+  .xmas-flake{animation:none!important}
+  .xmas-snow{display:none}
+}
