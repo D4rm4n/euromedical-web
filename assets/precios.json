@@ -586,7 +586,7 @@
   },
   {
    "id": "em-creatina-1000",
-   "nombre": "Creatina Monohidratada",
+   "nombre": "Creatina 1000g (materia prima)",
    "presentacion": "1000 g",
    "detalle": "1000 g · Sin sabor",
    "img": "p49",
@@ -598,7 +598,7 @@
   },
   {
    "id": "em-creatina-500",
-   "nombre": "Creatina Monohidratada",
+   "nombre": "Creatina 500g (materia prima)",
    "presentacion": "500 g",
    "detalle": "500 g · Sin sabor",
    "img": "p50",
@@ -610,7 +610,7 @@
   },
   {
    "id": "em-creatina-300",
-   "nombre": "Creatina Monohidratada",
+   "nombre": "Creatina 300g (materia prima)",
    "presentacion": "300 g",
    "detalle": "300 g · Sin sabor",
    "img": "p51",

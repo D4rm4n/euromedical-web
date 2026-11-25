@@ -66,7 +66,7 @@
             "<li><strong>Niños</strong> (1 a 12 años): <a href=\"" + p("vitazinc-f-junior-400-g.html") + "\">VitaZinc-F Junior</a></li>" +
             "<li><strong>Adultos:</strong> <a href=\"" + p("vitazinc-f-adultos-400-g.html") + "\">VitaZinc-F Adultos</a></li>" +
             "<li><strong>Adultos mayores (50+):</strong> <a href=\"" + p("vitazinc-f-silver-400-g.html") + "\">VitaZinc-F Silver</a></li>" +
-            "<li><strong>Deportistas:</strong> <a href=\"" + p("vitazinc-f-proteina-400-g.html") + "\">VitaZinc-F Proteína</a> y <a href=\"" + p("creatina-monohidratada.html") + "\">creatina monohidratada</a></li>" +
+            "<li><strong>Deportistas:</strong> <a href=\"" + p("vitazinc-f-proteina-400-g.html") + "\">VitaZinc-F Proteína</a> y <a href=\"" + p("creatina-monohidratada.html") + "\">creatina (materia prima)</a></li>" +
             "<li><strong>Memoria y concentración:</strong> <a href=\"" + p("vitazinc-f-fosforo.html") + "\">VitaZinc-F Fósforo</a>, un complemento que apoya tu día a día.</li>" +
           "</ul>" +
           "<p>Si no estás seguro, escríbenos por WhatsApp y te ayudamos a elegir.</p>"
