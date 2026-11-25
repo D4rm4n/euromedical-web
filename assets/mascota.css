@@ -1,4 +1,4 @@
-/* Vitico — ayudante de preguntas frecuentes (sin IA).
+/* Doctor Albert — ayudante de preguntas frecuentes (sin IA).
    Se coloca a la izquierda del botón flotante de WhatsApp (.wa-float,
    right:18px bottom:18px) para no taparlo ni al carrito (.cart-fab,
    right:20px bottom:92px). */
@@ -25,12 +25,12 @@
   border-radius:50%;
   display:grid;
   place-items:center;
-  filter:drop-shadow(0 8px 18px rgba(11,46,89,.28));
+  filter:drop-shadow(0 0 0.7px #0B2E59) drop-shadow(0 8px 16px rgba(11,46,89,.34));
 }
 .mascota-toggle:hover{transform:translateY(-1px)}
 .mascota-toggle:focus-visible{outline:3px solid #F5B21B;outline-offset:3px}
-.mascota-toggle .mascota-svg{width:76px;height:76px;display:block}
-.mascota-toggle .mascota-svg{animation:mascota-bob 3.6s ease-in-out infinite}
+.mascota-toggle{overflow:visible;border-radius:0}
+.mascota-toggle .mascota-avatar{width:76px;height:76px;display:block;object-fit:cover;object-position:50% 4%;animation:mascota-bob 3.6s ease-in-out infinite;pointer-events:none;-webkit-user-select:none;user-select:none}
 @keyframes mascota-bob{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-4px)}
@@ -83,7 +83,7 @@
   background:linear-gradient(180deg,#0B2E59,#0F4C97);
   color:#fff;
 }
-.mascota-head .mascota-svg{width:92px;height:120px;flex:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
+.mascota-head .mascota-avatar{width:92px;height:120px;flex:none;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25));pointer-events:none;-webkit-user-select:none;user-select:none}
 .mascota-head-txt{flex:1;min-width:0}
 .mascota-head-txt strong{
   display:block;
@@ -202,31 +202,9 @@
 .mascota-wa svg{width:20px;height:20px;flex:none}
 
 /* Animaciones del SVG */
-.mascota-arm-wave{
-  transform-box:fill-box;
-  transform-origin:0 0;
-  animation:mascota-wave 3.4s ease-in-out infinite;
-}
-@keyframes mascota-wave{
-  0%,62%,100%{transform:rotate(0deg)}
-  68%{transform:rotate(-26deg)}
-  74%{transform:rotate(10deg)}
-  80%{transform:rotate(-20deg)}
-  86%{transform:rotate(0deg)}
-}
-.mascota-lid{
-  transform-box:fill-box;
-  transform-origin:50% 0;
-  animation:mascota-blink 5.2s ease-in-out infinite;
-}
-@keyframes mascota-blink{
-  0%,90%,100%{transform:scaleY(0)}
-  93%,95%{transform:scaleY(1)}
-}
-
 @media (max-width:600px){
   .mascota-root{right:82px;bottom:16px;width:68px;height:68px}
-  .mascota-toggle,.mascota-toggle .mascota-svg{width:68px;height:68px}
+  .mascota-toggle,.mascota-toggle .mascota-avatar{width:68px;height:68px}
   .mascota-panel{
     left:12px;
     right:12px;
@@ -234,13 +212,11 @@
     bottom:100px;
     max-height:calc(100dvh - 116px);
   }
-  .mascota-head .mascota-svg{width:80px;height:104px}
+  .mascota-head .mascota-avatar{width:80px;height:104px}
   .mascota-hint{font-size:.75rem;padding:7px 10px}
 }
 @media (prefers-reduced-motion:reduce){
-  .mascota-toggle .mascota-svg,
-  .mascota-arm-wave,
-  .mascota-lid,
+  .mascota-toggle .mascota-avatar,
   .mascota-hint{animation:none !important}
   .mascota-toggle:hover,
   .mascota-faq:hover{transform:none}

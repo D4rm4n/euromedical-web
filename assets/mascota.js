@@ -1,22 +1,17 @@
-/* Vitico — ayudante de preguntas frecuentes (sin IA, sin servidor).
-   Vista previa: el include está solo en index.html.
-   Para publicarlo en todo el sitio, agregue en cada HTML (como christmas.css/js):
-     Páginas en la raíz:
-       <link rel="stylesheet" href="assets/mascota.css?v=20261124">
-       <script src="assets/mascota.js?v=20261124" defer></script>
-     Páginas en /blog/:
-       <link rel="stylesheet" href="../assets/mascota.css?v=20261124">
-       <script src="../assets/mascota.js?v=20261124" defer></script>
+/* Doctor Albert — ayudante de preguntas frecuentes (sin IA, sin servidor).
+   Oso polar con gorra VitaZinc y bata Euromedical.
+   El include ya está en todas las páginas (assets/mascota.css|js?v=20261124;
+   en /blog/, ../assets/...).
 */
 (function () {
   "use strict";
 
   /* Un solo lugar para cambiar el nombre */
-  const MASCOTA_NOMBRE = "Vitico";
+  const MASCOTA_NOMBRE = "Doctor Albert";
 
   const WA_URL = "https://wa.me/573186995645";
   const ML_URL = "https://listado.mercadolibre.com.co/_CustId_264996991";
-  const GREETING = "Hola, mi nombre es " + MASCOTA_NOMBRE + " 👋 ¿En qué te puedo ayudar?";
+  const GREETING = "Hola, soy el " + MASCOTA_NOMBRE + " 🐻‍❄️ ¿En qué te puedo ayudar?";
 
   function siteRoot() {
     const el = document.querySelector('script[src*="mascota.js"]');
@@ -26,88 +21,11 @@
     return /\/blog\//.test(location.pathname) ? "../" : "";
   }
 
-  function mascotaSvg(mode) {
-    /* mode: "btn" recorte de cara+gorra (~80px); "full" cuerpo completo (~120px) */
-    const vb = mode === "full" ? "0 0 100 134" : "18 0 70 80";
-    const uid = "m-" + mode;
+  function mascotaAvatar(mode) {
+    const src = siteRoot() + "assets/mascota-albert.webp?v=20261125a";
     return (
-      '<svg class="mascota-svg mascota-svg-' + mode + '" viewBox="' + vb + '" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">' +
-        '<defs>' +
-          '<linearGradient id="' + uid + '-face" x1="0" y1="0" x2="0" y2="1">' +
-            '<stop offset="0" stop-color="#FFFFFF"/>' +
-            '<stop offset="1" stop-color="#E6F1FC"/>' +
-          '</linearGradient>' +
-          '<linearGradient id="' + uid + '-cap" x1="0" y1="0" x2="0" y2="1">' +
-            '<stop offset="0" stop-color="#1565C0"/>' +
-            '<stop offset="1" stop-color="#0B2E59"/>' +
-          '</linearGradient>' +
-        '</defs>' +
-        /* sombra */
-        '<ellipse cx="50" cy="130" rx="22" ry="3.2" fill="#0B2E59" opacity=".18"/>' +
-        /* brazo izquierdo (estático), manga de la bata */
-        '<path d="M28 86 C16 92 11 102 12 114" fill="none" stroke="#0B2E59" stroke-width="9" stroke-linecap="round"/>' +
-        '<path d="M28 86 C16 92 11 102 12 114" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>' +
-        '<circle cx="12" cy="118" r="6" fill="#E8EEF6" stroke="#0B2E59" stroke-width="1.6"/>' +
-        /* bata */
-        '<path d="M32 78 C26 80 16 86 15 96 L17 124 C17 126 19 128 22 128 L78 128 C81 128 83 126 83 124 L85 96 C84 86 74 80 68 78 Z" fill="#FFFFFF" stroke="#0B2E59" stroke-width="1.8"/>' +
-        /* solapas */
-        '<path d="M40 78 L50 108 L50 80 Z" fill="#E6F1FC" stroke="#0B2E59" stroke-width="1.2" stroke-linejoin="round"/>' +
-        '<path d="M60 78 L50 108 L50 80 Z" fill="#CFE4FA" stroke="#0B2E59" stroke-width="1.2" stroke-linejoin="round"/>' +
-        /* logo Euromedical (óvalo azul + tres barras doradas) */
-        '<ellipse cx="32.5" cy="99" rx="8.6" ry="6.4" fill="#2A57A5" stroke="#0B2E59" stroke-width="0.8"/>' +
-        '<g fill="#D6B26E">' +
-          '<rect x="29.2" y="95.2" width="3.4" height="2" rx=".3"/>' +
-          '<rect x="29.2" y="97.6" width="4.6" height="2" rx=".3"/>' +
-          '<rect x="29.2" y="100" width="5.6" height="2" rx=".3"/>' +
-        '</g>' +
-        /* placa Euromedical */
-        '<rect x="49" y="95.2" width="35" height="10.2" rx="2" fill="#0B2E59"/>' +
-        '<text x="66.5" y="102.6" text-anchor="middle" font-family="Montserrat,Open Sans,sans-serif" font-weight="800" font-size="5" fill="#F5B21B">Euromedical</text>' +
-        /* botones */
-        '<circle cx="50" cy="112" r="2" fill="#D6B26E" stroke="#0B2E59" stroke-width=".8"/>' +
-        '<circle cx="50" cy="120" r="2" fill="#D6B26E" stroke="#0B2E59" stroke-width=".8"/>' +
-        /* pies */
-        '<rect x="28" y="126.5" width="16" height="5.5" rx="2.5" fill="#0B2E59"/>' +
-        '<rect x="56" y="126.5" width="16" height="5.5" rx="2.5" fill="#0B2E59"/>' +
-        /* brazo derecho que saluda (origen en el hombro 73,86) */
-        '<g transform="translate(73 86)">' +
-          '<g class="mascota-arm-wave">' +
-            '<path d="M0 0 C13 -6 21 -18 17 -34" fill="none" stroke="#0B2E59" stroke-width="9" stroke-linecap="round"/>' +
-            '<path d="M0 0 C13 -6 21 -18 17 -34" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>' +
-            '<circle cx="16" cy="-39" r="6.2" fill="#E8EEF6" stroke="#0B2E59" stroke-width="1.6"/>' +
-            '<path d="M13 -45 Q16 -50 19 -45" fill="none" stroke="#0B2E59" stroke-width="1.3" stroke-linecap="round"/>' +
-          '</g>' +
-        '</g>' +
-        /* cabeza */
-        '<rect x="24" y="36" width="52" height="46" rx="17" fill="url(#' + uid + '-face)" stroke="#0B2E59" stroke-width="2"/>' +
-        /* tornillos laterales */
-        '<circle cx="24" cy="58" r="3.1" fill="#D6B26E" stroke="#0B2E59" stroke-width="1.2"/>' +
-        '<circle cx="76" cy="58" r="3.1" fill="#D6B26E" stroke="#0B2E59" stroke-width="1.2"/>' +
-        '<circle cx="24" cy="58" r="1" fill="#0B2E59"/>' +
-        '<circle cx="76" cy="58" r="1" fill="#0B2E59"/>' +
-        /* ojos */
-        '<ellipse cx="38.5" cy="57" rx="7.2" ry="8.2" fill="#FFFFFF" stroke="#0B2E59" stroke-width="1.3"/>' +
-        '<ellipse cx="61.5" cy="57" rx="7.2" ry="8.2" fill="#FFFFFF" stroke="#0B2E59" stroke-width="1.3"/>' +
-        '<circle cx="40" cy="58.2" r="3.7" fill="#0B2E59"/>' +
-        '<circle cx="60" cy="58.2" r="3.7" fill="#0B2E59"/>' +
-        '<circle cx="41.5" cy="56.4" r="1.35" fill="#FFFFFF"/>' +
-        '<circle cx="61.5" cy="56.4" r="1.35" fill="#FFFFFF"/>' +
-        /* párpados (parpadeo) */
-        '<ellipse class="mascota-lid" cx="38.5" cy="57" rx="7.4" ry="8.4" fill="#0B2E59"/>' +
-        '<ellipse class="mascota-lid" cx="61.5" cy="57" rx="7.4" ry="8.4" fill="#0B2E59"/>' +
-        /* sonrojo y sonrisa */
-        '<ellipse cx="30.5" cy="68" rx="5" ry="2.8" fill="#FF9BB0" opacity=".85"/>' +
-        '<ellipse cx="69.5" cy="68" rx="5" ry="2.8" fill="#FF9BB0" opacity=".85"/>' +
-        '<path d="M41 71 Q50 79 59 71" fill="none" stroke="#0B2E59" stroke-width="2" stroke-linecap="round"/>' +
-        /* gorra VitaZinc */
-        '<path d="M26 38 C28 20 72 20 74 38 L73 41 H27 Z" fill="url(#' + uid + '-cap)" stroke="#0B2E59" stroke-width="1.8" stroke-linejoin="round"/>' +
-        '<path d="M22 39 C28 43 72 43 78 39 C80 42 78 45 72 46 H28 C22 45 20 42 22 39Z" fill="#D6B26E" stroke="#0B2E59" stroke-width="1.4"/>' +
-        '<text x="50" y="35.2" text-anchor="middle" font-family="Montserrat,Open Sans,sans-serif" font-weight="800" font-size="7.1" fill="#FFFFFF">VitaZinc</text>' +
-        /* antena */
-        '<path d="M50 18 V5" stroke="#0B2E59" stroke-width="2" stroke-linecap="round"/>' +
-        '<circle cx="50" cy="4" r="3.6" fill="#F5B21B" stroke="#0B2E59" stroke-width="1.3"/>' +
-        '<circle cx="48.8" cy="3" r="1.1" fill="#FFFFFF" opacity=".85"/>' +
-      '</svg>'
+      '<img class="mascota-avatar mascota-avatar-' + mode + '" src="' + src +
+      '" alt="" width="544" height="800" decoding="async" draggable="false">'
     );
   }
 
@@ -188,7 +106,7 @@
     panel.setAttribute("aria-labelledby", "mascota-title");
     panel.innerHTML =
       '<div class="mascota-head">' +
-        mascotaSvg("full") +
+        mascotaAvatar("full") +
         '<div class="mascota-head-txt">' +
           '<strong id="mascota-title">' + MASCOTA_NOMBRE + "</strong>" +
           "<span>Ayudante Euromedical</span>" +
@@ -224,7 +142,7 @@
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-controls", panelId);
     toggle.setAttribute("aria-label", "Abrir ayudante " + MASCOTA_NOMBRE);
-    toggle.innerHTML = mascotaSvg("btn");
+    toggle.innerHTML = mascotaAvatar("btn");
 
     root.appendChild(hint);
     root.appendChild(panel);
