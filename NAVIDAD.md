@@ -15,3 +15,12 @@ El JS añade la clase `xmas` en `<html>`. Todo el CSS navideño está bajo `html
 
 - `assets/christmas.css` — luces de colores en el header, franja de saludo, árbol y estrella, acentos suaves en botones y hero.
 - `assets/christmas.js` — inserta el banner «En esta Navidad, regala salud a los tuyos y comparte en familia», adornos SVG, luces, nieve ligera (`pointer-events: none`) y, solo en la portada (escritorio), un árbol a un lado del hero con el lema «de parte de Euromedical». Menos copos y adornos en móvil; sin nieve ni destellos si el usuario pide `prefers-reduced-motion`.
+
+## Banner de descuentos de fin de año
+
+Franja promocional (roja, verde y dorada) que reemplaza al banner de Black Friday. No menciona precios ni porcentajes. El botón abre la tienda de MercadoLibre.
+
+- Poner: `python3 tools/navidad_banner.py add` (también quita el banner de Black Friday si aún está)
+- Quitar: `python3 tools/navidad_banner.py remove`
+
+Esto es independiente del ambiente navideño (`assets/christmas.css` / `assets/christmas.js`). Al terminar la temporada, quite ambos.
