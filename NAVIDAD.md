@@ -18,7 +18,7 @@ El JS añade la clase `xmas` en `<html>`. Todo el CSS navideño está bajo `html
 
 ## Banner de descuentos de fin de año
 
-Franja promocional (roja, verde y dorada) que reemplaza al banner de Black Friday. No menciona precios ni porcentajes. El botón abre la tienda de MercadoLibre.
+Banner visual (rojo vivo, destellos, nieve, árbol, regalos y tipografía script) que reemplaza al de Black Friday. No menciona precios ni porcentajes. El botón abre la tienda de MercadoLibre. El arte está en `assets/img/banner-navidad.svg`.
 
 - Poner: `python3 tools/navidad_banner.py add` (también quita el banner de Black Friday si aún está)
 - Quitar: `python3 tools/navidad_banner.py remove`
